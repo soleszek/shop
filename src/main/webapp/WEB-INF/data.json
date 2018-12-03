@@ -1,0 +1,58 @@
+{
+  "users": [{
+    "id": 1,
+    "username": "soleszek",
+    "password": "s",
+    "totalCashSpend": 1000,
+    "name": "Sylwester",
+    "surname": "Oleszek",
+    "role" : "admin"
+  },
+    {
+      "id": 2,
+      "username": "koleszek",
+      "password": "ko1983",
+      "totalCashSpend": 100,
+      "name": "Katarzyna",
+      "surname": "Oleszek",
+      "role" : "user"
+    }
+  ],
+  "products": [{
+    "id": 1,
+    "name": "Kasza",
+    "description": "sypka i fajna",
+    "price": 10,
+    "quantity": 15
+  },
+    {
+      "id": 2,
+      "name": "Baton 3Bit",
+      "description": "ciastko, karmel, czekolada",
+      "price": 3,
+      "quantity": 27
+    },
+    {
+      "id": 3,
+      "name": "Proszek Dosia",
+      "description": "Po co przepłacać, skoro jest Dosia?",
+      "price": 8,
+      "quantity": 50
+    },
+    {
+      "id": 4,
+      "name": "Chleb Baltonowski",
+      "description": "Chrupki i pachnący",
+      "price": 3,
+      "quantity": 15
+    },
+    {
+      "id": 5,
+      "name": "Ryż",
+      "description": "Zapłać za jeden, weź 3",
+      "price": 2,
+      "quantity": 154
+    }
+
+  ]
+}

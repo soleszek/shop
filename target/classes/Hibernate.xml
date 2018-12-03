@@ -1,0 +1,17 @@
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/users_database?serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">Sylwester@localhost</property>
+        <property name="hibernate.connection.password">Samsunge1080@</property>
+        <property name="hibernate.connection.pool_size">10</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL57Dialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="com.sylwesteroleszek.entity.NewUser"/>
+
+    </session-factory>
+</hibernate-configuration>

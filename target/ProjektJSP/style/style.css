@@ -1,0 +1,106 @@
+body{
+    font-size: 14px;
+    background-color: white;
+}
+
+.login-panel{
+    width: 30em;
+    padding: 10px;
+    margin-top: 110px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0px;
+    border-radius: 5px 5px 7px 7px;
+    background-image: url("/style/login-background.jpg");
+    background-size: cover;
+    -webkit-box-shadow: 3px 3px 30px 5px rgba(204,204,204,1);
+    -moz-box-shadow: 3px 3px 30px 5px rgba(204,204,204,1);
+    box-shadow: 3px 3px 30px 5px rgba(204,204,204,1);
+}
+
+
+.panel-title{
+    line-height: 1.875em;
+    padding: 0 0 0.625em 0;
+    margin: 0 0 0.625em 1em;
+    border-bottom: 1px solid;
+    font-weight: normal;
+    color: white;
+}
+
+.login-form{
+    margin: auto;
+    padding-bottom: 0;
+}
+
+.field{
+    position: relative;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    outline: none;
+}
+
+.label{
+    color: #fff;
+    display: block;
+    font-size: 1em;
+    line-height: 1.4em;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.create-user{
+    margin: 0 0 1.4em 22em;
+    padding-bottom: 0.5em;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a {
+    line-height: 1.4em;
+    text-decoration: underline;
+    color: white;
+    cursor: pointer;
+}
+
+.commands{
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    text-align: right;
+}
+
+.input-submit{
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 2.14em;
+    height: 2.14em;
+
+    border: 1px solid #b4b6ba;
+    border-radius: 3px;
+    background-color: #f5f6f7;
+    background-image: linear-gradient(#f5f6f7, #e3e5e5);
+    border-color: #42a2da;
+    color: #42a2da;
+    text-align: center !important;
+    position: relative;
+    vertical-align: middle;
+    width: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="button"], input[type="submit"] {
+    cursor: pointer;
+}
+
+fieldset {
+    border: 0;
+
+}
+

@@ -1,0 +1,32 @@
+#container
+{
+    background-color: white;
+    width: 300px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    -webkit-box-shadow: 3px 3px 30px 5px rgba(204,204,204,1);
+    -moz-box-shadow: 3px 3px 30px 5px rgba(204,204,204,1);
+    box-shadow: 3px 3px 30px 5px rgba(204,204,204,1);
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a {
+    line-height: 1.4em;
+    text-decoration: none;
+    color: blue;
+    cursor: pointer;
+}
+
+.create-user{
+    margin-left: auto;
+    margin-right: auto;
+    width: 130px;
+}
+
+
+

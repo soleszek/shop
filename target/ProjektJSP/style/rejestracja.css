@@ -1,0 +1,30 @@
+#container-create-user
+{
+    background-color: white;
+    width: 300px;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    -webkit-box-shadow: 3px 3px 30px 5px rgba(204,204,204,1);
+    -moz-box-shadow: 3px 3px 30px 5px rgba(204,204,204,1);
+    box-shadow: 3px 3px 30px 5px rgba(204,204,204,1);
+}
+
+.create-user{
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    padding-top: 20px;
+}
+
+.create-user:hover{
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    color: green;
+}
+
+
+
+
