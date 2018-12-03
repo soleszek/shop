@@ -24,9 +24,10 @@ public class LoginServlet extends HttpServlet {
 
         JsonClass jsonClass = new JsonClass();
 
-        String file = "/WEB-INF/data.json";
-        ServletContext context = getServletContext();
-        InputStream is = context.getResourceAsStream(file);
+        //String file = "/WEB-INF/data.json";
+        String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
+        //ServletContext context = getServletContext();
+        InputStream is = new FileInputStream(file);
 
         if(is != null) {
             InputStreamReader isr = new InputStreamReader(is);

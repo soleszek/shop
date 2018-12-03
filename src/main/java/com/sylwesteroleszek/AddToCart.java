@@ -10,10 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,9 +23,9 @@ public class AddToCart extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         JsonClass jsonClass = new JsonClass();
 
-        String file = "/WEB-INF/data.json";
-        ServletContext context = getServletContext();
-        InputStream is = context.getResourceAsStream(file);
+        //String file = "/WEB-INF/data.json";
+        String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
+        InputStream is = new FileInputStream(file);
 
         if(is != null) {
             InputStreamReader isr = new InputStreamReader(is);
@@ -54,6 +51,17 @@ public class AddToCart extends HttpServlet {
 
         List<Product> productsInShoppingCart = new ArrayList<>();
         productsInShoppingCart.add(yourProduct);
+
+        String json = gson.toJson(jsonClass);
+
+        try {
+            FileWriter writer = new FileWriter(file);
+            writer.write(json);
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
         req.getSession().setAttribute("productlist", products);

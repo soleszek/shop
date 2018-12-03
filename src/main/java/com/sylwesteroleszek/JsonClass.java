@@ -4,11 +4,13 @@ import com.sylwesteroleszek.entity.NewUser;
 import com.sylwesteroleszek.products.Product;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class JsonClass {
     List<NewUser> users;
     List<Product> products;
+    HashMap<NewUser, List<Product>> shoppingCart;
 
     public JsonClass() {
     }

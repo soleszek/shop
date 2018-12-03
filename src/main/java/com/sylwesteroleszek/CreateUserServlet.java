@@ -56,11 +56,11 @@ public class CreateUserServlet extends HttpServlet {
 
         String json = gson.toJson(jsonClass);
 
-        String path = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
+        //String path = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
         //String realPath = getServletContext().getRealPath(file);
 
         try {
-            FileWriter writer = new FileWriter(path);
+            FileWriter writer = new FileWriter(file);
             writer.write(json);
             writer.close();
 

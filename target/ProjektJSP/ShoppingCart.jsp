@@ -79,6 +79,13 @@
 
     </table>
 
+    <table class="shopping-cart" cellpadding="2" cellspacing="2" border="1" align="center" width="50%">
+        <th>Subtotal</th>
+        <tr>
+            <td><center>200</center></td>
+        </tr>
+    </table>
+
     <div id="buttons">
 
         <form action="Finalize" method="get">
