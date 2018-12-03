@@ -6,26 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27ffbbd6-af36-426d-8721-93f707863c2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/JsonClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/JsonClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ProductList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/ShoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/ShoppingCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/AddToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/AddToCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/CreateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/CreateUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/JsonClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/JsonClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/ProductList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/ProductList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/AddToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/AddToCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/CreateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/CreateUserServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/JsonClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/JsonClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/LoginServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/ProductList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/ProductList.class" afterDir="false" />
-    </list>
+    <list default="true" id="27ffbbd6-af36-426d-8721-93f707863c2f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -130,7 +111,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
+            <state relative-caret-position="-43">
               <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -139,7 +120,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/JsonClass.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="105">
@@ -164,7 +145,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="885">
@@ -386,7 +367,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543871570417" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543873058062" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Pulpit/SDA/hibernate" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -571,12 +552,12 @@
       <workItem from="1543744552288" duration="10000" />
       <workItem from="1543744695082" duration="15630000" />
       <workItem from="1543767968584" duration="7063000" />
-      <workItem from="1543856678309" duration="13520000" />
+      <workItem from="1543856678309" duration="14192000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120319000" />
+    <option name="totallyTimeSpent" value="120991000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -882,9 +863,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
+        <state relative-caret-position="-43">
           <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -900,13 +888,6 @@
             <element signature="e#458#459#0" expanded="true" />
             <element signature="e#486#487#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
         </state>
       </provider>
     </entry>
