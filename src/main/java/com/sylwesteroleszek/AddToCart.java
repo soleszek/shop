@@ -1,10 +1,10 @@
 package com.sylwesteroleszek;
 
 import com.google.gson.Gson;
+import com.sylwesteroleszek.cart.ProductInCart;
 import com.sylwesteroleszek.products.Product;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,15 +12,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @WebServlet("/AddToCart")
 public class AddToCart extends HttpServlet {
 
     Gson gson = new Gson();
 
+    Map<String, List<ProductInCart>> shoppingCartOfAllClients = new HashMap<>();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        String user = (String)req.getSession().getAttribute("user");
+
         JsonClass jsonClass = new JsonClass();
 
         //String file = "/WEB-INF/data.json";
@@ -47,10 +54,14 @@ public class AddToCart extends HttpServlet {
         int quantity = productToChange.getQuantity() - 1;
         productToChange.setQuantity(quantity);
 
-        Product yourProduct = new Product(1l, productToChange.getName(), productToChange.getDescription(), productToChange.getPrice(), 1);
+        //Product yourProduct = new Product(1l, productToChange.getName(), productToChange.getDescription(), productToChange.getPrice(), 1);
 
-        List<Product> productsInShoppingCart = new ArrayList<>();
-        productsInShoppingCart.add(yourProduct);
+        ProductInCart productInCart = new ProductInCart(productToChange.getId(), 1, false);
+
+        List<ProductInCart> productsInShoppingCart = new ArrayList<>();
+        productsInShoppingCart.add(productInCart);
+
+        shoppingCartOfAllClients.put(user, productsInShoppingCart);
 
         String json = gson.toJson(jsonClass);
 

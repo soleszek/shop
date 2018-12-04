@@ -3,36 +3,18 @@ package com.sylwesteroleszek.cart;
 import com.sylwesteroleszek.entity.NewUser;
 import com.sylwesteroleszek.products.Product;
 
-public class Cart {
-    NewUser client;
-    Product product;
+public class ProductInCart {
     Long productId;
+    int quantity;
     Boolean isBought;
 
-    public Cart() {
+    public ProductInCart() {
     }
 
-    public Cart(NewUser client, Product product, Long productId, Boolean isBought) {
-        this.client = client;
-        this.product = product;
+    public ProductInCart(Long productId, int quantity, Boolean isBought) {
         this.productId = productId;
+        this.quantity = quantity;
         this.isBought = isBought;
-    }
-
-    public NewUser getClient() {
-        return client;
-    }
-
-    public void setClient(NewUser client) {
-        this.client = client;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
     }
 
     public Long getProductId() {
@@ -41,6 +23,14 @@ public class Cart {
 
     public void setProductId(Long productId) {
         this.productId = productId;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public Boolean getBought() {
