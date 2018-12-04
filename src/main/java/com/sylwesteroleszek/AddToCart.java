@@ -1,6 +1,7 @@
 package com.sylwesteroleszek;
 
 import com.google.gson.Gson;
+import com.sylwesteroleszek.cart.HistoryOfClients;
 import com.sylwesteroleszek.cart.ProductInCart;
 import com.sylwesteroleszek.products.Product;
 
@@ -21,8 +22,6 @@ public class AddToCart extends HttpServlet {
 
     Gson gson = new Gson();
 
-    Map<String, List<ProductInCart>> shoppingCartOfAllClients = new HashMap<>();
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -32,6 +31,7 @@ public class AddToCart extends HttpServlet {
 
         //String file = "/WEB-INF/data.json";
         String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
+        String carts = "/home/sylwester/Dokumenty/projekty/sklep/carts.json";
         InputStream is = new FileInputStream(file);
 
         if(is != null) {
@@ -58,16 +58,46 @@ public class AddToCart extends HttpServlet {
 
         ProductInCart productInCart = new ProductInCart(productToChange.getId(), 1, false);
 
-        List<ProductInCart> productsInShoppingCart = new ArrayList<>();
-        productsInShoppingCart.add(productInCart);
 
-        shoppingCartOfAllClients.put(user, productsInShoppingCart);
-
-        String json = gson.toJson(jsonClass);
+        String json1 = gson.toJson(jsonClass);
 
         try {
             FileWriter writer = new FileWriter(file);
-            writer.write(json);
+            writer.write(json1);
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        HistoryOfClients historyOfClients = new HistoryOfClients();
+
+        Map<String, List<ProductInCart>> shoppingCartOfAllClients = jsonClass.getShoppingCart();
+
+        Boolean clientExist = false;
+
+        for(String s : shoppingCartOfAllClients.keySet()) {
+            if(s == user){
+                List<ProductInCart> productsInShoppingCart = shoppingCartOfAllClients.get(user);
+                clientExist = true;
+            }
+        }
+
+        if(clientExist == false) {
+            
+        }
+
+        productsInShoppingCart.add(productInCart);
+
+
+
+        shoppingCartOfAllClients.put(user, productsInShoppingCart);
+
+        String json2 = gson.toJson(shoppingCartOfAllClients);
+
+        try {
+            FileWriter writer = new FileWriter(carts);
+            writer.write(json2);
             writer.close();
 
         } catch (IOException e) {
