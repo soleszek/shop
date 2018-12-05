@@ -30,4 +30,12 @@ public class ProductInCart {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    @Override
+    public String toString() {
+        return "ProductInCart{" +
+                "productId=" + productId +
+                ", quantity=" + quantity +
+                '}';
+    }
 }

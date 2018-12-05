@@ -20,4 +20,11 @@ public class ActiveCarts {
     public void setCarts(Map<String, List<ProductInCart>> carts) {
         this.carts = carts;
     }
+
+    @Override
+    public String toString() {
+        return "ActiveCarts{" +
+                "carts=" + carts +
+                '}';
+    }
 }

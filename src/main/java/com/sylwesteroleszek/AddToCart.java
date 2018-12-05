@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -73,14 +74,15 @@ public class AddToCart extends HttpServlet {
 
         InputStream isC = new FileInputStream(carts);
 
-        Type type = new TypeToken<Map<String, ProductInCart>>(){}.getType();
+        //Type type = new TypeToken<Map<String, ProductInCart>>(){}.getType();
         Map<String, List<ProductInCart>> shoppingCartOfAllClients = activeCarts.getCarts();
 
         if(isC != null) {
             InputStreamReader isr = new InputStreamReader(isC);
             BufferedReader reader = new BufferedReader(isr);
             //activeCarts = gson.fromJson(reader, type);
-            shoppingCartOfAllClients = gson.fromJson(reader, Map.class);
+            shoppingCartOfAllClients = gson.fromJson(reader, HashMap.class);
+            //activeCarts = gson.fromJson(reader, ActiveCarts.class);
         }
 
         //Map<String, List<ProductInCart>> shoppingCartOfAllClients = activeCarts.getCarts();
@@ -132,9 +134,9 @@ public class AddToCart extends HttpServlet {
         req.getSession().setAttribute("productlist", products);
         //req.getSession().setAttribute("productsInShoppingCart", productsInShoppingCart);
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("productlist.jsp");
-        requestDispatcher.forward(req, resp);
+        /*RequestDispatcher requestDispatcher = req.getRequestDispatcher("productlist.jsp");
+        requestDispatcher.forward(req, resp);*/
 
-        //resp.getWriter().println(products.toString());
+        resp.getWriter().println(shoppingCartOfAllClients);
     }
 }

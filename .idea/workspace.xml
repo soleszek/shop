@@ -7,14 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27ffbbd6-af36-426d-8721-93f707863c2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/JsonClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/JsonClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/HistoryOfClients.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ProductInCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ProductInCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/productlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/productlist.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/JsonClass.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,7 +53,7 @@
           <entry key="NewUser" value="2" />
           <entry key="class" value="1" />
           <entry key="css" value="23" />
-          <entry key="java" value="74" />
+          <entry key="java" value="79" />
           <entry key="jpg" value="2" />
           <entry key="json" value="26" />
           <entry key="jsp" value="49" />
@@ -73,7 +68,7 @@
           <entry key="CSS" value="23" />
           <entry key="Database Element" value="2" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="74" />
+          <entry key="JAVA" value="79" />
           <entry key="JSON" value="26" />
           <entry key="JSP" value="49" />
           <entry key="PLAIN_TEXT" value="8" />
@@ -85,7 +80,7 @@
         <counts>
           <entry key="css" value="2251" />
           <entry key="dummy" value="23" />
-          <entry key="java" value="6238" />
+          <entry key="java" value="6286" />
           <entry key="json" value="153" />
           <entry key="jsp" value="3123" />
           <entry key="txt" value="110" />
@@ -95,7 +90,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2251" />
-          <entry key="JAVA" value="6238" />
+          <entry key="JAVA" value="6286" />
           <entry key="JSON" value="153" />
           <entry key="JSP" value="3123" />
           <entry key="PLAIN_TEXT" value="133" />
@@ -119,10 +114,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ShoppingCart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="352">
+              <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,17 +134,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ProductInCart.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+            <state relative-caret-position="300">
+              <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#550#551#0" expanded="true" />
-                <element signature="e#581#582#0" expanded="true" />
-                <element signature="e#626#627#0" expanded="true" />
-                <element signature="e#666#667#0" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
+                <element signature="e#285#286#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,7 +151,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
+            <state relative-caret-position="753">
               <caret line="68" column="9" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="68" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -161,7 +163,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
+            <state relative-caret-position="-35">
               <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -252,10 +254,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/Cart.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/carts.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/HistoryOfClients.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ProductInCart.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/productlist.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/JsonClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ProductInCart.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" />
       </list>
     </option>
@@ -415,7 +417,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544038701596" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544046851933" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Pulpit/SDA/hibernate" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -603,12 +605,12 @@
       <workItem from="1543744552288" duration="10000" />
       <workItem from="1543744695082" duration="15630000" />
       <workItem from="1543767968584" duration="7063000" />
-      <workItem from="1543856678309" duration="31927000" />
+      <workItem from="1543856678309" duration="35399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="138726000" />
+    <option name="totallyTimeSpent" value="142198000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -629,7 +631,7 @@
       <window_info id="Image Layers" order="4" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="Persistence" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.17412141" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.17412141" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" visible="true" weight="0.33116177" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32972974" />
@@ -641,8 +643,8 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32972974" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.17316018" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.21861471" />
-      <window_info active="true" anchor="bottom" id="Debug" order="11" visible="true" weight="0.40367964" />
+      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.21861471" />
+      <window_info anchor="bottom" id="Debug" order="11" weight="0.16774891" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="14" weight="0.32972974" />
@@ -674,7 +676,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java</url>
-          <line>98</line>
+          <line>100</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
@@ -851,34 +853,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ShoppingCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="885">
           <caret line="85" column="13" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -896,16 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ProductList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/products/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -916,14 +884,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ProductList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        <state relative-caret-position="420">
+          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#251#252#0" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ShoppingCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="29" column="45" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="68" column="9" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="68" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ProductInCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#581#582#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -938,36 +952,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="68" column="9" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="68" selection-end-column="9" />
+        <state relative-caret-position="300">
+          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="352">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ProductInCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#581#582#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
           </folding>
         </state>
       </provider>
