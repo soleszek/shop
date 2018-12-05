@@ -1,4 +1,4 @@
-<%@ page import="com.sylwesteroleszek.products.Product" %>
+<%@ page import="com.sylwesteroleszek.carts.Product" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>

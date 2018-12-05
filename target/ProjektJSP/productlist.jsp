@@ -38,7 +38,7 @@
 
     </div>
 
-<table class="products-table" cellpadding="2" cellspacing="2" border="1" align="center" width="100%">
+<table class="carts-table" cellpadding="2" cellspacing="2" border="1" align="center" width="100%">
     <tr>
         <th>Id</th>
         <th>Name</th>

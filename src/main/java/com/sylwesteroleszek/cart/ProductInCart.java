@@ -6,15 +6,13 @@ import com.sylwesteroleszek.products.Product;
 public class ProductInCart {
     Long productId;
     int quantity;
-    Boolean isBought;
 
     public ProductInCart() {
     }
 
-    public ProductInCart(Long productId, int quantity, Boolean isBought) {
+    public ProductInCart(Long productId, int quantity) {
         this.productId = productId;
         this.quantity = quantity;
-        this.isBought = isBought;
     }
 
     public Long getProductId() {
@@ -31,13 +29,5 @@ public class ProductInCart {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-    public Boolean getBought() {
-        return isBought;
-    }
-
-    public void setBought(Boolean bought) {
-        isBought = bought;
     }
 }

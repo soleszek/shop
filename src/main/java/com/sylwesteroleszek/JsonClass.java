@@ -11,15 +11,13 @@ import java.util.Map;
 public class JsonClass {
     List<NewUser> users;
     List<Product> products;
-    Map<String, List<ProductInCart>> shoppingCart;
 
     public JsonClass() {
     }
 
-    public JsonClass(List<NewUser> users, List<Product> products, Map<String, List<ProductInCart>> shoppingCart) {
+    public JsonClass(List<NewUser> users, List<Product> products) {
         this.users = users;
         this.products = products;
-        this.shoppingCart = shoppingCart;
     }
 
     public List<NewUser> getUsers() {
@@ -38,20 +36,11 @@ public class JsonClass {
         this.products = products;
     }
 
-    public Map<String, List<ProductInCart>> getShoppingCart() {
-        return shoppingCart;
-    }
-
-    public void setShoppingCart(Map<String, List<ProductInCart>> shoppingCart) {
-        this.shoppingCart = shoppingCart;
-    }
-
     @Override
     public String toString() {
         return "JsonClass{" +
                 "users=" + users +
                 ", products=" + products +
-                ", shoppingCart=" + shoppingCart +
                 '}';
     }
 }
