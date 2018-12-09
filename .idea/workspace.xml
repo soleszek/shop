@@ -7,13 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27ffbbd6-af36-426d-8721-93f707863c2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ProductInCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ProductInCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/AddToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/AddToCart.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/AddToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/AddToCart.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,7 +53,7 @@
           <entry key="NewUser" value="2" />
           <entry key="class" value="1" />
           <entry key="css" value="23" />
-          <entry key="java" value="92" />
+          <entry key="java" value="94" />
           <entry key="jpg" value="2" />
           <entry key="json" value="26" />
           <entry key="jsp" value="51" />
@@ -73,7 +68,7 @@
           <entry key="CSS" value="23" />
           <entry key="Database Element" value="2" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="92" />
+          <entry key="JAVA" value="94" />
           <entry key="JSON" value="26" />
           <entry key="JSP" value="51" />
           <entry key="PLAIN_TEXT" value="8" />
@@ -85,9 +80,9 @@
         <counts>
           <entry key="css" value="2251" />
           <entry key="dummy" value="23" />
-          <entry key="java" value="6944" />
+          <entry key="java" value="7015" />
           <entry key="json" value="153" />
-          <entry key="jsp" value="3154" />
+          <entry key="jsp" value="3294" />
           <entry key="txt" value="110" />
           <entry key="xml" value="73" />
         </counts>
@@ -95,9 +90,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2251" />
-          <entry key="JAVA" value="6944" />
+          <entry key="JAVA" value="7015" />
           <entry key="JSON" value="153" />
-          <entry key="JSP" value="3154" />
+          <entry key="JSP" value="3294" />
           <entry key="PLAIN_TEXT" value="133" />
           <entry key="XML" value="73" />
         </counts>
@@ -130,7 +125,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/productlist.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-704">
+            <state relative-caret-position="-617">
               <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
             </state>
           </provider>
@@ -139,8 +134,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
+            <state relative-caret-position="382">
+              <caret line="125" column="46" lean-forward="true" selection-start-line="125" selection-start-column="46" selection-end-line="125" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,8 +146,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1095">
-              <caret line="73" column="89" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="93" />
+            <state relative-caret-position="217">
+              <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="82" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/products/Product.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="53" selection-start-line="53" selection-end-line="53" />
+              <folding>
+                <element signature="e#1072#1073#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -564,12 +571,12 @@
       <workItem from="1543744695082" duration="15630000" />
       <workItem from="1543767968584" duration="7063000" />
       <workItem from="1543856678309" duration="39929000" />
-      <workItem from="1544203325997" duration="5455000" />
+      <workItem from="1544203325997" duration="8511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152183000" />
+    <option name="totallyTimeSpent" value="155239000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -582,6 +589,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="34" width="1928" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -590,7 +598,7 @@
       <window_info id="Image Layers" order="4" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="Persistence" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.21938232" />
+      <window_info content_ui="combo" id="Project" order="7" visible="true" weight="0.21938232" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" visible="true" weight="0.33116177" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32972974" />
@@ -602,7 +610,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32972974" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.17316018" />
-      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.21861471" />
+      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.21861471" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.4199134" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -632,12 +640,6 @@
           <line>15</line>
           <properties />
           <option name="timeStamp" value="23" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java</url>
-          <line>64</line>
-          <properties />
-          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -853,16 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/products/Product.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="e#1072#1073#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/JsonClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -873,24 +865,6 @@
             <element signature="e#554#555#0" expanded="true" />
             <element signature="e#603#604#0" expanded="true" />
             <element signature="e#637#638#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#699#700#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#878#879#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -925,25 +899,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/productlist.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-704">
+        <state relative-caret-position="-617">
           <caret line="1" column="46" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="127" column="49" selection-start-line="127" selection-start-column="49" selection-end-line="127" selection-end-column="49" />
+        <state relative-caret-position="475">
+          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="125" column="46" lean-forward="true" selection-start-line="125" selection-start-column="46" selection-end-line="125" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/products/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <element signature="e#1072#1073#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1095">
-          <caret line="73" column="89" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="93" />
+        <state relative-caret-position="217">
+          <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="82" selection-end-column="13" />
         </state>
       </provider>
     </entry>

@@ -30,6 +30,11 @@
         }
     %>
 
+    <%
+        List<Product> productsInStock = (List<Product>) request.getSession().getAttribute("productList");
+        List<ProductInCart> productsInCart = (List<ProductInCart>) request.getSession().getAttribute("productsInCart");
+    %>
+
     <div id="logo">
 
         <h1>Your shopping cart</h1>
@@ -48,14 +53,13 @@
         </tr>
 
         <%
-            List<ProductInCart> productsInCart = (List<ProductInCart>) request.getSession().getAttribute("productsInCart");
 
             for(ProductInCart productInCart : productsInCart) {
         %>
         <tr>
             <td><center><%=productInCart.getProductId()%></center></td>
-            <%--<td><%=productInCart.getName()%></td>
-            <td><center><%=productInCart.getPrice()%></center></td>--%>
+            <%--<td><%= %></td>
+            <td><center><%=productInCart.getPrice()%></center></td>&ndash;%&gt;--%>
             <td>
                 <form class="plus-minus" action="Addpiece" method="get">
                     <%--<input type="hidden" name="add" value="<%=product.getId()%>"/>--%>

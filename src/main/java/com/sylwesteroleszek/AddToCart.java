@@ -98,15 +98,13 @@ public class AddToCart extends HttpServlet {
             }
         }
 
-
-        List<ProductInCart> productsInCart = new ArrayList<>();
-
         if(isClientExist == false) {
             ActiveCarts activeCarts = new ActiveCarts();
             activeCarts.setUsername(user);
             ProductInCart productInCart = new ProductInCart();
             productInCart.setProductId(Double.parseDouble(productId));
             productInCart.setQuantity(1.0);
+            List<ProductInCart> productsInCart = new ArrayList<>();
             productsInCart.add(productInCart);
             activeCarts.setProductInCarts(productsInCart);
             productCartList.add(activeCarts);
@@ -123,9 +121,16 @@ public class AddToCart extends HttpServlet {
             e.printStackTrace();
         }
 
+        List<ProductInCart> actualProductsInCart = new ArrayList<>();
+        for(ActiveCarts ac : productCartList){
+            if(ac.getUsername().equals(user)){
+                actualProductsInCart = ac.getProductInCarts();
+            }
+        }
+
 
         req.getSession().setAttribute("productlist", products);
-        req.getSession().setAttribute("productsInCart", productsInCart);
+        req.getSession().setAttribute("productsInCart", actualProductsInCart);
 
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("productlist.jsp");
         requestDispatcher.forward(req, resp);
