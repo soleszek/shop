@@ -1,33 +1,40 @@
 package com.sylwesteroleszek.cart;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import com.sylwesteroleszek.entity.NewUser;
 import com.sylwesteroleszek.products.Product;
 
 public class ProductInCart {
-    Long productId;
-    int quantity;
+    @SerializedName("productId")
+    @Expose
+    private Double productId;
+
+    @SerializedName("quantity")
+    @Expose
+    private Double quantity;
 
     public ProductInCart() {
     }
 
-    public ProductInCart(Long productId, int quantity) {
+    public ProductInCart(Double productId, Double quantity) {
         this.productId = productId;
         this.quantity = quantity;
     }
 
-    public Long getProductId() {
+    public Double getProductId() {
         return productId;
     }
 
-    public void setProductId(Long productId) {
+    public void setProductId(Double productId) {
         this.productId = productId;
     }
 
-    public int getQuantity() {
+    public Double getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(Double quantity) {
         this.quantity = quantity;
     }
 

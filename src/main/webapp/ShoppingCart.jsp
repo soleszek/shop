@@ -1,5 +1,6 @@
-<%@ page import="com.sylwesteroleszek.carts.Product" %>
 <%@ page import="java.util.List" %>
+<%@ page import="com.sylwesteroleszek.products.Product" %>
+<%@ page import="com.sylwesteroleszek.cart.ProductInCart" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -47,30 +48,30 @@
         </tr>
 
         <%
-            List<Product> productsInShoppingCart = (List<Product>) request.getSession().getAttribute("productsInShoppingCart");
+            List<ProductInCart> productsInCart = (List<ProductInCart>) request.getSession().getAttribute("productsInCart");
 
-            for(Product product : productsInShoppingCart) {
+            for(ProductInCart productInCart : productsInCart) {
         %>
         <tr>
-            <td><center><%=product.getId()%></center></td>
-            <td><%=product.getName()%></td>
-            <td><center><%=product.getPrice()%></center></td>
+            <td><center><%=productInCart.getProductId()%></center></td>
+            <%--<td><%=productInCart.getName()%></td>
+            <td><center><%=productInCart.getPrice()%></center></td>--%>
             <td>
                 <form class="plus-minus" action="Addpiece" method="get">
-                    <input type="hidden" name="add" value="<%=product.getId()%>"/>
+                    <%--<input type="hidden" name="add" value="<%=product.getId()%>"/>--%>
                     <input type="submit" name="plus" value="+">
                 </form></td>
             </td>
-            <td><center><%=product.getQuantity()%></center></td>
+            <td><center><%=productInCart.getQuantity()%></center></td>
             <td>
                 <form class="plus-minus" action="Subtractpiece" method="get">
-                    <input type="hidden" name="subtract" value="<%=product.getId()%>"/>
+                    <%--<input type="hidden" name="subtract" value="<%=product.getId()%>"/>--%>
                     <input type="submit" name="minus" value="-">
                 </form></td>
             </td>
             <td>
                 <form class="plus-minus-remove" action="Remove" method="get">
-                    <input type="hidden" name="remove" value="<%=product.getId()%>"/>
+                    <%--<input type="hidden" name="remove" value="<%=product.getId()%>"/>--%>
                     <input type="submit" name="removeFromCart" value="Remove">
                 </form></td>
         </tr>

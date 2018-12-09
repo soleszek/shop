@@ -1,30 +1,51 @@
 package com.sylwesteroleszek.cart;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import com.sylwesteroleszek.products.Product;
+
 import java.util.List;
 import java.util.Map;
 
 public class ActiveCarts {
-    Map<String, List<ProductInCart>> carts;
+
+    @SerializedName("username")
+    @Expose
+    private String username;
+
+    @SerializedName("products")
+    @Expose
+    private List<ProductInCart> productInCarts = null;
 
     public ActiveCarts() {
     }
 
-    public ActiveCarts(Map<String, List<ProductInCart>> carts) {
-        this.carts = carts;
+    public ActiveCarts(String username, List<ProductInCart> productInCarts) {
+        this.username = username;
+        this.productInCarts = productInCarts;
     }
 
-    public Map<String, List<ProductInCart>> getCarts() {
-        return carts;
+    public String getUsername() {
+        return username;
     }
 
-    public void setCarts(Map<String, List<ProductInCart>> carts) {
-        this.carts = carts;
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public List<ProductInCart> getProductInCarts() {
+        return productInCarts;
+    }
+
+    public void setProductInCarts(List<ProductInCart> productInCarts) {
+        this.productInCarts = productInCarts;
     }
 
     @Override
     public String toString() {
         return "ActiveCarts{" +
-                "carts=" + carts +
+                "username='" + username + '\'' +
+                ", productInCarts=" + productInCarts +
                 '}';
     }
 }

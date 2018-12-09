@@ -31,7 +31,7 @@ public class AddToCart extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String user = (String)req.getSession().getAttribute("user");
-        final String productId = (String)req.getParameter("productId");
+        String productId = (String)req.getParameter("productId");
 
         JsonClass jsonClass = new JsonClass();
 
@@ -46,14 +46,8 @@ public class AddToCart extends HttpServlet {
         List<Product> products = jsonClass.getProducts();
 
         int index = Integer.parseInt(productId) -1;
-        //Product productToChange = products.get(index);
-
-        //int quantity = productToChange.getQuantity() - 1;
-        //productToChange.setQuantity(quantity);
 
         products.get(index).setQuantity(products.get(index).getQuantity() - 1);
-
-        //Product yourProduct = new Product(1l, productToChange.getName(), productToChange.getDescription(), productToChange.getPrice(), 1);
 
         String jsonData = gson.toJson(jsonClass);
 
@@ -68,58 +62,57 @@ public class AddToCart extends HttpServlet {
 
         //Cart
 
-        ProductInCart productInCart = new ProductInCart(Long.parseLong(productId), 1);
+        List<ActiveCarts> productCartList = new ArrayList<>();
 
-        ActiveCarts activeCarts = new ActiveCarts();
+        Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
 
         InputStream isC = new FileInputStream(carts);
-
-        //Type type = new TypeToken<Map<String, ProductInCart>>(){}.getType();
-        Map<String, List<ProductInCart>> shoppingCartOfAllClients = activeCarts.getCarts();
 
         if(isC != null) {
             InputStreamReader isr = new InputStreamReader(isC);
             BufferedReader reader = new BufferedReader(isr);
-            //activeCarts = gson.fromJson(reader, type);
-            shoppingCartOfAllClients = gson.fromJson(reader, HashMap.class);
-            //activeCarts = gson.fromJson(reader, ActiveCarts.class);
+            productCartList = gson.fromJson(reader, type);
         }
 
-        //Map<String, List<ProductInCart>> shoppingCartOfAllClients = activeCarts.getCarts();
+        Boolean isClientExist = false;
+        Boolean isProductExist = false;
 
+        for(ActiveCarts ac : productCartList){
+            if(ac.getUsername().equals(user)){
+                isClientExist = true;
+                for (ProductInCart p : ac.getProductInCarts()){
+                    if(p.getProductId().equals(productId)){
+                        isProductExist = true;
+                        p.setQuantity(p.getQuantity() + 1);
+                    }
+                }
 
-
-        Boolean clientExist = false;
-
-        for(String s : shoppingCartOfAllClients.keySet()) {
-            if(s.equals(user)){
-                clientExist = true;
-            }
-        }
-
-        if(clientExist == true) {
-            List<ProductInCart> productsInShoppingCartOfGivenClient = shoppingCartOfAllClients.get(user);
-
-            boolean isProductInCart = false;
-
-            for(ProductInCart p : productsInShoppingCartOfGivenClient){
-                if(p.getProductId() == Long.parseLong(productId)){
-                    p.setQuantity(p.getQuantity() + 1);
-                    isProductInCart = true;
+                if(isProductExist == false) {
+                    ProductInCart productInCart = new ProductInCart();
+                    productInCart.setProductId(Double.parseDouble(productId));
+                    productInCart.setQuantity(1.0);
+                    List<ProductInCart> productsInCart = ac.getProductInCarts();
+                    productsInCart.add(productInCart);
+                    ac.setProductInCarts(productsInCart);
                 }
             }
-
-            if(isProductInCart == true) {
-                productsInShoppingCartOfGivenClient.add(productInCart);
-            }
-
-        } else {
-            List<ProductInCart> productsInCart = new ArrayList<>();
-            productsInCart.add(productInCart);
-            shoppingCartOfAllClients.put(user, productsInCart);
         }
 
-        String jsonCarts = gson.toJson(shoppingCartOfAllClients);
+
+        List<ProductInCart> productsInCart = new ArrayList<>();
+
+        if(isClientExist == false) {
+            ActiveCarts activeCarts = new ActiveCarts();
+            activeCarts.setUsername(user);
+            ProductInCart productInCart = new ProductInCart();
+            productInCart.setProductId(Double.parseDouble(productId));
+            productInCart.setQuantity(1.0);
+            productsInCart.add(productInCart);
+            activeCarts.setProductInCarts(productsInCart);
+            productCartList.add(activeCarts);
+        }
+
+        String jsonCarts = gson.toJson(productCartList, type);
 
         try {
             FileWriter writer = new FileWriter(carts);
@@ -132,11 +125,9 @@ public class AddToCart extends HttpServlet {
 
 
         req.getSession().setAttribute("productlist", products);
-        //req.getSession().setAttribute("productsInShoppingCart", productsInShoppingCart);
+        req.getSession().setAttribute("productsInCart", productsInCart);
 
-        /*RequestDispatcher requestDispatcher = req.getRequestDispatcher("productlist.jsp");
-        requestDispatcher.forward(req, resp);*/
-
-        resp.getWriter().println(shoppingCartOfAllClients);
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("productlist.jsp");
+        requestDispatcher.forward(req, resp);
     }
 }
