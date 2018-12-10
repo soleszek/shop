@@ -81,7 +81,7 @@ public class AddToCart extends HttpServlet {
             if(ac.getUsername().equals(user)){
                 isClientExist = true;
                 for (ProductInCart p : ac.getProductInCarts()){
-                    if(p.getProductId().equals(productId)){
+                    if(p.getProductId() == (Double.parseDouble(productId))){
                         isProductExist = true;
                         p.setQuantity(p.getQuantity() + 1);
                     }
@@ -90,6 +90,8 @@ public class AddToCart extends HttpServlet {
                 if(isProductExist == false) {
                     ProductInCart productInCart = new ProductInCart();
                     productInCart.setProductId(Double.parseDouble(productId));
+                    productInCart.setName(products.get(index).getName());
+                    productInCart.setPrice((double)products.get(index).getPrice());
                     productInCart.setQuantity(1.0);
                     List<ProductInCart> productsInCart = ac.getProductInCarts();
                     productsInCart.add(productInCart);
@@ -103,6 +105,8 @@ public class AddToCart extends HttpServlet {
             activeCarts.setUsername(user);
             ProductInCart productInCart = new ProductInCart();
             productInCart.setProductId(Double.parseDouble(productId));
+            productInCart.setName(products.get(index).getName());
+            productInCart.setPrice((double)products.get(index).getPrice());
             productInCart.setQuantity(1.0);
             List<ProductInCart> productsInCart = new ArrayList<>();
             productsInCart.add(productInCart);

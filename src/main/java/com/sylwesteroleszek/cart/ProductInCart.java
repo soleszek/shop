@@ -10,15 +10,27 @@ public class ProductInCart {
     @Expose
     private Double productId;
 
+    @SerializedName("name")
+    @Expose
+    private String name;
+
+    @SerializedName("price")
+    @Expose
+    private Double price;
+
     @SerializedName("quantity")
     @Expose
     private Double quantity;
 
+
+
     public ProductInCart() {
     }
 
-    public ProductInCart(Double productId, Double quantity) {
+    public ProductInCart(Double productId, String name, Double price, Double quantity) {
         this.productId = productId;
+        this.name = name;
+        this.price = price;
         this.quantity = quantity;
     }
 
@@ -30,19 +42,27 @@ public class ProductInCart {
         this.productId = productId;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
     public Double getQuantity() {
         return quantity;
     }
 
     public void setQuantity(Double quantity) {
         this.quantity = quantity;
-    }
-
-    @Override
-    public String toString() {
-        return "ProductInCart{" +
-                "productId=" + productId +
-                ", quantity=" + quantity +
-                '}';
     }
 }

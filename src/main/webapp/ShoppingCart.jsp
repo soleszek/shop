@@ -31,7 +31,6 @@
     %>
 
     <%
-        List<Product> productsInStock = (List<Product>) request.getSession().getAttribute("productList");
         List<ProductInCart> productsInCart = (List<ProductInCart>) request.getSession().getAttribute("productsInCart");
     %>
 
@@ -58,24 +57,24 @@
         %>
         <tr>
             <td><center><%=productInCart.getProductId()%></center></td>
-            <%--<td><%= %></td>
-            <td><center><%=productInCart.getPrice()%></center></td>&ndash;%&gt;--%>
+            <td><%=productInCart.getName()%></td>
+            <td><center><%=productInCart.getPrice()%></center></td>
             <td>
                 <form class="plus-minus" action="Addpiece" method="get">
-                    <%--<input type="hidden" name="add" value="<%=product.getId()%>"/>--%>
+                    <input type="hidden" name="add" value="<%=productInCart.getProductId()%>"/>
                     <input type="submit" name="plus" value="+">
                 </form></td>
             </td>
             <td><center><%=productInCart.getQuantity()%></center></td>
             <td>
                 <form class="plus-minus" action="Subtractpiece" method="get">
-                    <%--<input type="hidden" name="subtract" value="<%=product.getId()%>"/>--%>
+                    <input type="hidden" name="subtract" value="<%=productInCart.getProductId()%>"/>
                     <input type="submit" name="minus" value="-">
                 </form></td>
             </td>
             <td>
                 <form class="plus-minus-remove" action="Remove" method="get">
-                    <%--<input type="hidden" name="remove" value="<%=product.getId()%>"/>--%>
+                    <input type="hidden" name="remove" value="<%=productInCart.getProductId()%>"/>
                     <input type="submit" name="removeFromCart" value="Remove">
                 </form></td>
         </tr>
@@ -84,10 +83,17 @@
 
     </table>
 
+    <%
+        Double subtotal = 0.0;
+        for(ProductInCart p : productsInCart){
+            subtotal = subtotal + (p.getPrice() * p.getQuantity());
+        }
+    %>
+
     <table class="shopping-cart" cellpadding="2" cellspacing="2" border="1" align="center" width="50%">
         <th>Subtotal</th>
         <tr>
-            <td><center>200</center></td>
+            <td><center><%=subtotal%></center></td>
         </tr>
     </table>
 
