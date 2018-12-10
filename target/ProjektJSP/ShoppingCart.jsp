@@ -60,14 +60,14 @@
             <td><%=productInCart.getName()%></td>
             <td><center><%=productInCart.getPrice()%></center></td>
             <td>
-                <form class="plus-minus" action="Addpiece" method="get">
+                <form class="plus-minus" action="AddPiece" method="get">
                     <input type="hidden" name="add" value="<%=productInCart.getProductId()%>"/>
                     <input type="submit" name="plus" value="+">
                 </form></td>
             </td>
             <td><center><%=productInCart.getQuantity()%></center></td>
             <td>
-                <form class="plus-minus" action="Subtractpiece" method="get">
+                <form class="plus-minus" action="SubtractPiece" method="get">
                     <input type="hidden" name="subtract" value="<%=productInCart.getProductId()%>"/>
                     <input type="submit" name="minus" value="-">
                 </form></td>
