@@ -57,7 +57,7 @@ public class RemoveProduct extends HttpServlet {
                     if(productsInCart.get(i).getProductId() == productId){
                         numberOfPieces = productsInCart.get(i).getQuantity();
                         productsInCart.remove(productsInCart.get(i));
-                        i--;
+                        //i--;
                     }
                 }
             }
@@ -88,7 +88,7 @@ public class RemoveProduct extends HttpServlet {
 
         int index = ((int)(productId)) -1;
 
-        products.get(index).setQuantity((int)numberOfPieces);
+        products.get(index).setQuantity(products.get(index).getQuantity() + (int)numberOfPieces);
 
         String jsonData = gson.toJson(jsonClass);
 
