@@ -6,10 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27ffbbd6-af36-426d-8721-93f707863c2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp" afterDir="false" />
-    </list>
+    <list default="true" id="27ffbbd6-af36-426d-8721-93f707863c2f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +33,7 @@
     <session id="-344015085">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.14" value="1" />
@@ -571,12 +568,12 @@
       <workItem from="1543744695082" duration="15630000" />
       <workItem from="1543767968584" duration="7063000" />
       <workItem from="1543856678309" duration="39929000" />
-      <workItem from="1544203325997" duration="8511000" />
+      <workItem from="1544203325997" duration="8855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155239000" />
+    <option name="totallyTimeSpent" value="155583000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -610,7 +607,7 @@
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32972974" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.17316018" />
-      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.21861471" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.21861471" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.4199134" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
