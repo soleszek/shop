@@ -100,7 +100,7 @@
     <div id="buttons">
 
         <form action="Finalize" method="get">
-            <input type="submit" name="button" value="Proceed to checkout">
+            <input type="submit" name="checkout" value="Proceed to checkout">
         </form>
 
         <form action="ProductList" method="get">
