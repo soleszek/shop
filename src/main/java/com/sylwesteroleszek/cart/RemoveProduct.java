@@ -47,21 +47,21 @@ public class RemoveProduct extends HttpServlet {
             productCartList = gson.fromJson(reader, type);
         }
 
-        List<ProductInCart> productsInCartToRemove = new ArrayList<>();
-
         for(ActiveCarts ac : productCartList){
             if(ac.getUsername().equals(user)){
-                //productsInCart = ac.getProductInCarts();
-                for(ProductInCart p : productsInCartToRemove){
-                    if(p.getProductId() == productId){
-                        numberOfPieces = p.getQuantity();
-                        productsInCartToRemove.add(p);
+                List<ProductInCart> productsInCart = ac.getProductInCarts();
+
+                for( int i = 0; i < productsInCart.size(); i++ )
+                {
+
+                    if(productsInCart.get(i).getProductId() == productId){
+                        numberOfPieces = productsInCart.get(i).getQuantity();
+                        productsInCart.remove(productsInCart.get(i));
+                        i--;
                     }
                 }
             }
         }
-
-
 
         String jsonCarts = gson.toJson(productCartList, type);
 
