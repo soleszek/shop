@@ -73,7 +73,7 @@
                 </form></td>
             </td>
             <td>
-                <form class="plus-minus-remove" action="Remove" method="get">
+                <form class="plus-minus-remove" action="RemoveProduct" method="get">
                     <input type="hidden" name="remove" value="<%=productInCart.getProductId()%>"/>
                     <input type="submit" name="removeFromCart" value="Remove">
                 </form></td>
