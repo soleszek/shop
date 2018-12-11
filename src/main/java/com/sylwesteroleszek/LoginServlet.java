@@ -1,7 +1,11 @@
 package com.sylwesteroleszek;
 
 import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.sylwesteroleszek.cart.ActiveCarts;
+import com.sylwesteroleszek.cart.ProductInCart;
 import com.sylwesteroleszek.entity.NewUser;
+import com.sylwesteroleszek.products.Product;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -12,6 +16,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/LoginServlet")
@@ -26,6 +32,7 @@ public class LoginServlet extends HttpServlet {
 
         //String file = "/WEB-INF/data.json";
         String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
+        String carts = "/home/sylwester/Dokumenty/projekty/sklep/carts.json";
         //ServletContext context = getServletContext();
         InputStream is = new FileInputStream(file);
 
@@ -63,6 +70,33 @@ public class LoginServlet extends HttpServlet {
                     .println("<font color=red>Incorrect or missing login details</font>");
             rd.include(req, resp);
         }
+
+        List<ActiveCarts> productCartList = new ArrayList<>();
+
+        Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
+
+        InputStream isC = new FileInputStream(carts);
+
+        if(isC != null) {
+            InputStreamReader isr = new InputStreamReader(isC);
+            BufferedReader reader = new BufferedReader(isr);
+            productCartList = gson.fromJson(reader, type);
+        }
+
+        List<ProductInCart> actualProductsInCart = new ArrayList<>();
+        for(ActiveCarts ac : productCartList){
+            if(ac.getUsername().equals(user)){
+                actualProductsInCart = ac.getProductInCarts();
+            }
+        }
+
+        req.getSession().setAttribute("productsInCart", actualProductsInCart);
+
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("ShoppingCart.jsp");
+        requestDispatcher.forward(req, resp);
+
+
+
 
 
     }
