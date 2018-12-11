@@ -58,6 +58,34 @@ public class LoginServlet extends HttpServlet {
                 resp.addCookie(loginCookie);
                 //req.setAttribute(u.getUsername(), user);
                 //resp.sendRedirect("loginSuccess.jsp");
+
+                Long totalCashSpend = 0l;
+
+                if(u.getUsername().equals(user)){
+                        totalCashSpend = u.getTotalCashSpend();
+                }
+
+                List<ActiveCarts> productCartList = new ArrayList<>();
+
+                Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
+
+                InputStream isC = new FileInputStream(carts);
+
+                if(isC != null) {
+                    InputStreamReader isr = new InputStreamReader(isC);
+                    BufferedReader reader = new BufferedReader(isr);
+                    productCartList = gson.fromJson(reader, type);
+                }
+
+                List<ProductInCart> actualProductsInCart = new ArrayList<>();
+                for(ActiveCarts ac : productCartList){
+                    if(ac.getUsername().equals(user)){
+                        actualProductsInCart = ac.getProductInCarts();
+                    }
+                }
+
+                req.getSession().setAttribute("productsInCart", actualProductsInCart);
+                req.setAttribute("totalCashSpend", totalCashSpend);
                 req.getSession().setAttribute("user", u.getUsername());
                 RequestDispatcher rD = req.getRequestDispatcher("loginSuccess.jsp");
                 rD.forward(req, resp);
@@ -70,35 +98,6 @@ public class LoginServlet extends HttpServlet {
                     .println("<font color=red>Incorrect or missing login details</font>");
             rd.include(req, resp);
         }
-
-        List<ActiveCarts> productCartList = new ArrayList<>();
-
-        Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
-
-        InputStream isC = new FileInputStream(carts);
-
-        if(isC != null) {
-            InputStreamReader isr = new InputStreamReader(isC);
-            BufferedReader reader = new BufferedReader(isr);
-            productCartList = gson.fromJson(reader, type);
-        }
-
-        List<ProductInCart> actualProductsInCart = new ArrayList<>();
-        for(ActiveCarts ac : productCartList){
-            if(ac.getUsername().equals(user)){
-                actualProductsInCart = ac.getProductInCarts();
-            }
-        }
-
-        req.getSession().setAttribute("productsInCart", actualProductsInCart);
-
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("ShoppingCart.jsp");
-        requestDispatcher.forward(req, resp);
-
-
-
-
-
     }
 
 }
