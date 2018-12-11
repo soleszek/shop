@@ -7,7 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27ffbbd6-af36-426d-8721-93f707863c2f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/loginSuccess.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginSuccess.jsp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -82,7 +82,7 @@
           <entry key="dummy" value="32" />
           <entry key="java" value="8002" />
           <entry key="json" value="320" />
-          <entry key="jsp" value="3397" />
+          <entry key="jsp" value="3514" />
           <entry key="txt" value="110" />
           <entry key="xml" value="73" />
         </counts>
@@ -92,7 +92,7 @@
           <entry key="CSS" value="2251" />
           <entry key="JAVA" value="8002" />
           <entry key="JSON" value="320" />
-          <entry key="JSP" value="3397" />
+          <entry key="JSP" value="3514" />
           <entry key="PLAIN_TEXT" value="142" />
           <entry key="XML" value="73" />
         </counts>
@@ -172,11 +172,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/loginSuccess.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="345">
-                  <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+                <state relative-caret-position="381">
+                  <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
                 </state>
               </provider>
             </entry>
@@ -190,10 +190,10 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="344">
+                <state relative-caret-position="422">
                   <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
                   <folding>
                     <element signature="imports" expanded="true" />
@@ -285,7 +285,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/style/shopping-cart.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ShoppingCart.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LogoutServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/loginSuccess.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/style/rejestracja.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/rejestracja.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/style/general.css" />
@@ -309,6 +308,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/ShoppingCart.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/Finalize.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/loginSuccess.jsp" />
       </list>
     </option>
   </component>
@@ -467,7 +467,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544509724080" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544510219565" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Dokumenty/projekty/sklep/data.json" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -657,12 +657,12 @@
       <workItem from="1543767968584" duration="7063000" />
       <workItem from="1543856678309" duration="39929000" />
       <workItem from="1544203325997" duration="8511000" />
-      <workItem from="1544459342331" duration="16805000" />
+      <workItem from="1544459342331" duration="17064000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172044000" />
+    <option name="totallyTimeSpent" value="172303000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1059,13 +1059,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/loginSuccess.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1092,11 +1085,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
+        <state relative-caret-position="422">
           <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/loginSuccess.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="41" column="66" selection-start-line="41" selection-start-column="66" selection-end-line="41" selection-end-column="66" />
         </state>
       </provider>
     </entry>
