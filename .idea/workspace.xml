@@ -7,15 +7,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27ffbbd6-af36-426d-8721-93f707863c2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/ActiveCartsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/ProductDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ActiveCartsDaoImplJson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductDaoJson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/dao/ActiveCartsDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/daoImpl/ActiveCartsDaoImplJson.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/daoImpl/NewUserDaoImplHibernate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/utils/JsonDaoImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/utils/JsonDaoImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/dao/ActiveCartsDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/daoImpl/ActiveCartsDaoImplJson.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/daoImpl/NewUserDaoImplHibernate.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/utils/JsonDaoImpl$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/utils/JsonDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LogoutServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LogoutServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ProductList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ProductList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/AddPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/AddPiece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/Finalize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/Finalize.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/RemoveProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/RemoveProduct.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/SubtractPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/SubtractPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplHibernate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/AddToCart$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/AddToCart$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/AddToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/AddToCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/CreateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/CreateUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/ProductList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/ProductList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/cart/AddPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/cart/AddPiece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/cart/Finalize$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/cart/Finalize$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/cart/Finalize.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/cart/Finalize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/cart/RemoveProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/cart/RemoveProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/cart/SubtractPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/cart/SubtractPiece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/dao/NewUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/dao/NewUserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/dao/NewUserDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/providers/DaoProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/providers/DaoProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/utils/JsonUtils$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/ProjektJSP/WEB-INF/classes/com/sylwesteroleszek/utils/JsonUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/AddToCart$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/AddToCart$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/AddToCart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/AddToCart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/CreateUserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/CreateUserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/ProductList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/ProductList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/cart/AddPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/cart/AddPiece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/cart/Finalize$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/cart/Finalize$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/cart/Finalize.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/cart/Finalize.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/cart/RemoveProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/cart/RemoveProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/cart/SubtractPiece.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/cart/SubtractPiece.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/dao/NewUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/dao/NewUserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/dao/NewUserDaoImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/providers/DaoProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/providers/DaoProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/utils/JsonUtils$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/utils/JsonUtils.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -62,7 +113,7 @@
           <entry key="NewUser" value="2" />
           <entry key="class" value="1" />
           <entry key="css" value="25" />
-          <entry key="java" value="150" />
+          <entry key="java" value="190" />
           <entry key="jpg" value="2" />
           <entry key="json" value="30" />
           <entry key="jsp" value="65" />
@@ -77,7 +128,7 @@
           <entry key="CSS" value="25" />
           <entry key="Database Element" value="2" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="150" />
+          <entry key="JAVA" value="190" />
           <entry key="JSON" value="30" />
           <entry key="JSP" value="65" />
           <entry key="PLAIN_TEXT" value="8" />
@@ -88,8 +139,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="2251" />
-          <entry key="dummy" value="44" />
-          <entry key="java" value="8803" />
+          <entry key="dummy" value="79" />
+          <entry key="java" value="9639" />
           <entry key="json" value="320" />
           <entry key="jsp" value="3514" />
           <entry key="txt" value="110" />
@@ -99,42 +150,54 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2251" />
-          <entry key="JAVA" value="8803" />
+          <entry key="JAVA" value="9639" />
           <entry key="JSON" value="320" />
           <entry key="JSP" value="3514" />
-          <entry key="PLAIN_TEXT" value="154" />
+          <entry key="PLAIN_TEXT" value="189" />
           <entry key="XML" value="73" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47591147">
+    <splitter split-orientation="horizontal" split-proportion="0.44358477">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="365">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/loginSuccess.jsp">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonDaoImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="510">
-                  <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+                <state relative-caret-position="517">
+                  <caret line="96" column="5" lean-forward="true" selection-start-line="90" selection-start-column="4" selection-end-line="96" selection-end-column="5" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/productlist.jsp">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-288">
-                  <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+                <state relative-caret-position="255">
+                  <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+                  <folding>
+                    <element signature="e#438#439#0" expanded="true" />
+                    <element signature="e#478#479#0" expanded="true" />
+                    <element signature="e#511#512#0" expanded="true" />
+                    <element signature="e#980#981#0" expanded="true" />
+                    <element signature="e#1019#1020#0" expanded="true" />
+                    <element signature="e#1068#1069#0" expanded="true" />
+                    <element signature="e#1105#1106#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonUtils.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1088">
-                  <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+                <state relative-caret-position="330">
+                  <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -147,40 +210,15 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LogoutServlet.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductDaoJson.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/Finalize.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-130">
-                  <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/RemoveProduct.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+                <state relative-caret-position="186">
+                  <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#261#262#0" expanded="true" />
+                    <element signature="e#288#289#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/SubtractPiece.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="480">
-                  <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
@@ -188,26 +226,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="90">
-                  <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="428">
-                  <caret line="104" column="9" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/AddPiece.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="122">
-                  <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+                <state relative-caret-position="120">
+                  <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -222,8 +242,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -234,19 +254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/rejestracja.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.css" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/hibernate.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/HibernateUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProviders.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/HibernateUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/Hibernate.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/json.txt" />
-        <option value="$PROJECT_DIR$/src/main/webapp/data.json" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/entity/NewUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/products/Product.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/ShoppinCart.jsp" />
@@ -278,13 +285,26 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ProductList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LogoutServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/AddPiece.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/Finalize.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/RemoveProduct.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/SubtractPiece.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/Dao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/ActiveCartsDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ActiveCartsDaoImplJson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplHibernate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/ProductInCartDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductInCartDaoJson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductDaoJson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/ProductDao.java" />
       </list>
     </option>
   </component>
@@ -390,6 +410,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sylwesteroleszek" type="462c0819:PsiDirectoryNode" />
+              <item name="daoImpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjektJSP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjektJSP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sylwesteroleszek" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -451,7 +480,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544874687615" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544891619938" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Dokumenty/projekty/sklep/data.json" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -646,12 +675,12 @@
       <workItem from="1544635297136" duration="1773000" />
       <workItem from="1544645777492" duration="7760000" />
       <workItem from="1544820242853" duration="613000" />
-      <workItem from="1544860756096" duration="13032000" />
+      <workItem from="1544860756096" duration="23073000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="202879000" />
+    <option name="totallyTimeSpent" value="212920000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -673,7 +702,7 @@
       <window_info id="Image Layers" order="4" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="Persistence" order="6" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.18210863" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.17412141" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" visible="true" weight="0.33116177" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32972974" />
@@ -718,13 +747,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java</url>
-          <line>51</line>
+          <line>49</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ProductList.java</url>
-          <line>23</line>
+          <line>20</line>
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
@@ -736,18 +765,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../testttttt/src/main/java/com/sylwesteroleszek/Zadanie1Sumowanie.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/hibernate.xml" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/acf5978f-ffdc-4362-974d-2d46fa5d5c03/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProviders.java" />
-    <entry file="file://$PROJECT_DIR$/hibernate.xml" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8b691084-9571-40c2-860a-7ea1fd84b66f/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/json.txt" />
     <entry file="das://8b691084-9571-40c2-860a-7ea1fd84b66f/schema/users_database/table/NewUser" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
@@ -817,13 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/products/Product.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -870,20 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/entity/NewUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
         </state>
       </provider>
     </entry>
@@ -936,17 +932,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/JsonClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ShoppingCart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ProductList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LogoutServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="102" column="9" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -960,71 +970,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/ActiveCarts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="465">
+          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/SubtractPiece.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="40" column="51" lean-forward="true" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/ProductList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/AddPiece.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/AddToCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="104" column="9" selection-start-line="104" selection-start-column="9" selection-end-line="104" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LogoutServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/Finalize.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-130">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        <state relative-caret-position="480">
+          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1038,27 +994,165 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/Finalize.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        <state relative-caret-position="-130">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
           <folding>
-            <element signature="e#383#384#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/SubtractPiece.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="8" />
+        <state relative-caret-position="366">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/JsonClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/ActiveCartsDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/cart/AddPiece.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ActiveCartsDaoImplJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="96" column="5" lean-forward="true" selection-start-line="90" selection-start-column="4" selection-end-line="96" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplHibernate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="44" lean-forward="true" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+          <folding>
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1019#1020#0" expanded="true" />
+            <element signature="e#1068#1069#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductDaoJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#288#289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/ProductDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/entity/NewUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+        <state relative-caret-position="120">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

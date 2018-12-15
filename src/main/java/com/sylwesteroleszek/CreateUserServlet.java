@@ -2,9 +2,8 @@ package com.sylwesteroleszek;
 
 import com.google.gson.Gson;
 import com.sylwesteroleszek.entity.NewUser;
-import com.sylwesteroleszek.utils.JsonUtils;
+import com.sylwesteroleszek.utils.JsonDaoImpl;
 
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,7 +27,7 @@ public class CreateUserServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-        jsonClass = JsonUtils.readUsers();
+        jsonClass = JsonDaoImpl.readUsers();
 
         List<NewUser> newUsers = jsonClass.getUsers();
 
@@ -45,7 +44,7 @@ public class CreateUserServlet extends HttpServlet {
 
         String json = gson.toJson(jsonClass);
 
-        JsonUtils.saveUser(json);
+        JsonDaoImpl.saveUser(json);
 
         resp.sendRedirect("index.jsp");
     }

@@ -1,11 +1,10 @@
 package com.sylwesteroleszek;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.cart.ActiveCarts;
 import com.sylwesteroleszek.cart.ProductInCart;
 import com.sylwesteroleszek.entity.NewUser;
-import com.sylwesteroleszek.utils.JsonUtils;
+import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,11 +14,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-
-import static com.sylwesteroleszek.utils.JsonUtils.readUsers;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -34,7 +30,7 @@ public class LoginServlet extends HttpServlet {
         String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
         String carts = "/home/sylwester/Dokumenty/projekty/sklep/carts.json";
 
-        jsonClass = JsonUtils.readUsers();
+        jsonClass = JsonDaoImpl.readUsers();
 
         List<NewUser> newUsers = jsonClass.getUsers();
 
@@ -59,7 +55,7 @@ public class LoginServlet extends HttpServlet {
 
                 List<ActiveCarts> productCartList = new ArrayList<>();
 
-                productCartList = JsonUtils.readCarts();
+                productCartList = JsonDaoImpl.readCarts();
 
                 List<ProductInCart> actualProductsInCart = new ArrayList<>();
                 for(ActiveCarts ac : productCartList){

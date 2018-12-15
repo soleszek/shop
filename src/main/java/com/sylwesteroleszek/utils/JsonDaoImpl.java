@@ -4,15 +4,13 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.JsonClass;
 import com.sylwesteroleszek.cart.ActiveCarts;
-import com.sylwesteroleszek.entity.NewUser;
-import com.sylwesteroleszek.products.Product;
 
 import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonUtils {
+public class JsonDaoImpl {
 
     static Gson gson = new Gson();
     static JsonClass jsonClass = new JsonClass();
@@ -88,6 +86,14 @@ public class JsonUtils {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private void readJsonFile(){
+
+    }
+
+    private void saveJsonFile(){
+
     }
 
 

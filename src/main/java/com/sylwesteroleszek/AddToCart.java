@@ -5,7 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.cart.ActiveCarts;
 import com.sylwesteroleszek.cart.ProductInCart;
 import com.sylwesteroleszek.products.Product;
-import com.sylwesteroleszek.utils.JsonUtils;
+import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -16,9 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @WebServlet("/AddToCart")
 public class AddToCart extends HttpServlet {
@@ -33,7 +31,7 @@ public class AddToCart extends HttpServlet {
 
         JsonClass jsonClass;
 
-        jsonClass = JsonUtils.readProducts();
+        jsonClass = JsonDaoImpl.readProducts();
 
         List<Product> products = jsonClass.getProducts();
 
@@ -43,13 +41,13 @@ public class AddToCart extends HttpServlet {
 
         String jsonData = gson.toJson(jsonClass);
 
-        JsonUtils.saveProduct(jsonData);
+        JsonDaoImpl.saveProduct(jsonData);
 
         //Cart
 
         List<ActiveCarts> productCartList;
 
-        productCartList = JsonUtils.readCarts();
+        productCartList = JsonDaoImpl.readCarts();
 
         Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
 
@@ -95,7 +93,7 @@ public class AddToCart extends HttpServlet {
 
         String jsonCarts = gson.toJson(productCartList, type);
 
-        JsonUtils.saveProductToCart(jsonCarts);
+        JsonDaoImpl.saveProductToCart(jsonCarts);
 
         List<ProductInCart> actualProductsInCart = new ArrayList<>();
         for(ActiveCarts ac : productCartList){

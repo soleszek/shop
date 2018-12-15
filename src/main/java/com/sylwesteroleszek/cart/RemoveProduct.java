@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.JsonClass;
 import com.sylwesteroleszek.products.Product;
-import com.sylwesteroleszek.utils.JsonUtils;
+import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -37,7 +37,7 @@ public class RemoveProduct extends HttpServlet {
 
         Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
 
-        productCartList = JsonUtils.readCarts();
+        productCartList = JsonDaoImpl.readCarts();
 
         for(ActiveCarts ac : productCartList){
             if(ac.getUsername().equals(user)){
@@ -57,11 +57,11 @@ public class RemoveProduct extends HttpServlet {
 
         String jsonCarts = gson.toJson(productCartList, type);
 
-        JsonUtils.saveProductToCart(jsonCarts);
+        JsonDaoImpl.saveProductToCart(jsonCarts);
 
         //Stock
 
-        jsonClass = JsonUtils.readProducts();
+        jsonClass = JsonDaoImpl.readProducts();
 
         List<Product> products = jsonClass.getProducts();
 
@@ -71,7 +71,7 @@ public class RemoveProduct extends HttpServlet {
 
         String jsonData = gson.toJson(jsonClass);
 
-        JsonUtils.saveProduct(jsonData);
+        JsonDaoImpl.saveProduct(jsonData);
 
         List<ProductInCart> actualProductsInCart = new ArrayList<>();
         for(ActiveCarts ac : productCartList){
