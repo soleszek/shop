@@ -16,8 +16,7 @@ public class NewUserDaoImplJson implements NewUserDao {
 
     static Gson gson = new Gson();
     static JsonClass jsonClass = new JsonClass();
-    static Type type = new TypeToken<ArrayList<ActiveCarts>>() {
-    }.getType();
+    static Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
 
 
     static String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
