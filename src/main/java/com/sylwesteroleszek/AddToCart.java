@@ -57,17 +57,11 @@ public class AddToCart extends HttpServlet {
 
         //Cart
 
-        List<ActiveCarts> productCartList = new ArrayList<>();
+        List<ActiveCarts> productCartList;
+
+        productCartList = JsonUtils.readCarts();
 
         Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
-
-        InputStream isC = new FileInputStream(carts);
-
-        if(isC != null) {
-            InputStreamReader isr = new InputStreamReader(isC);
-            BufferedReader reader = new BufferedReader(isr);
-            productCartList = gson.fromJson(reader, type);
-        }
 
         Boolean isClientExist = false;
         Boolean isProductExist = false;

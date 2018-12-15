@@ -47,14 +47,13 @@ public class JsonUtils {
         return jsonClass;
     }
 
-    public List<ActiveCarts> readCarts() throws FileNotFoundException {
+    public static List<ActiveCarts> readCarts() throws FileNotFoundException {
         InputStream isC = new FileInputStream(carts);
 
         InputStreamReader isr = new InputStreamReader(isC);
         BufferedReader reader = new BufferedReader(isr);
 
         return gson.fromJson(reader, type);
-
     }
 
     public void saveUser(String json) {

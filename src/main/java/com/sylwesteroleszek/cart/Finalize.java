@@ -5,6 +5,7 @@ import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.JsonClass;
 import com.sylwesteroleszek.entity.NewUser;
 import com.sylwesteroleszek.products.Product;
+import com.sylwesteroleszek.utils.JsonUtils;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,23 +31,17 @@ public class Finalize extends HttpServlet {
 
         String user = (String)req.getSession().getAttribute("user");
 
-        JsonClass jsonClass = new JsonClass();
+        JsonClass jsonClass;
 
         //Cart
 
         double totalCashSpent = 0.0;
 
-        List<ActiveCarts> productCartList = new ArrayList<>();
+        List<ActiveCarts> productCartList;
 
         Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
 
-        InputStream isC = new FileInputStream(carts);
-
-        if(isC != null) {
-            InputStreamReader isr = new InputStreamReader(isC);
-            BufferedReader reader = new BufferedReader(isr);
-            productCartList = gson.fromJson(reader, type);
-        }
+        productCartList = JsonUtils.readCarts();
 
         for(ActiveCarts ac : productCartList){
             if(ac.getUsername().equals(user)){
@@ -75,13 +70,7 @@ public class Finalize extends HttpServlet {
 
         //Stock
 
-        InputStream isP = new FileInputStream(file);
-
-        if(isP != null) {
-            InputStreamReader isr = new InputStreamReader(isP);
-            BufferedReader reader = new BufferedReader(isr);
-            jsonClass = gson.fromJson(reader, JsonClass.class);
-        }
+        jsonClass = JsonUtils.readProducts();
 
         List<NewUser> users = jsonClass.getUsers();
 

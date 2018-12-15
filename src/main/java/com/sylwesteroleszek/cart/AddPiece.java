@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.JsonClass;
 import com.sylwesteroleszek.products.Product;
+import com.sylwesteroleszek.utils.JsonUtils;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,15 +30,7 @@ public class AddPiece extends HttpServlet {
         String user = (String)req.getSession().getAttribute("user");
         double productId = Double.parseDouble(req.getParameter("add"));
 
-        JsonClass jsonClass = new JsonClass();
-
-        InputStream isP = new FileInputStream(file);
-
-        if(isP != null) {
-            InputStreamReader isr = new InputStreamReader(isP);
-            BufferedReader reader = new BufferedReader(isr);
-            jsonClass = gson.fromJson(reader, JsonClass.class);
-        }
+        JsonClass jsonClass = JsonUtils.readProducts();
 
         List<Product> products = jsonClass.getProducts();
 
@@ -58,17 +51,9 @@ public class AddPiece extends HttpServlet {
 
         //Cart
 
-        List<ActiveCarts> productCartList = new ArrayList<>();
-
         Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
 
-        InputStream isC = new FileInputStream(carts);
-
-        if(isC != null) {
-            InputStreamReader isr = new InputStreamReader(isC);
-            BufferedReader reader = new BufferedReader(isr);
-            productCartList = gson.fromJson(reader, type);
-        }
+        List<ActiveCarts> productCartList = JsonUtils.readCarts();
 
         for(ActiveCarts ac : productCartList){
             if(ac.getUsername().equals(user)){

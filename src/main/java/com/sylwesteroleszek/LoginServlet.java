@@ -48,8 +48,6 @@ public class LoginServlet extends HttpServlet {
                 loginCookie.setMaxAge(30 * 60);
 
                 resp.addCookie(loginCookie);
-                //req.setAttribute(u.getUsername(), user);
-                //resp.sendRedirect("loginSuccess.jsp");
 
                 Long totalCashSpend = 0l;
 
@@ -59,15 +57,7 @@ public class LoginServlet extends HttpServlet {
 
                 List<ActiveCarts> productCartList = new ArrayList<>();
 
-                Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
-
-                InputStream isC = new FileInputStream(carts);
-
-                if(isC != null) {
-                    InputStreamReader isr = new InputStreamReader(isC);
-                    BufferedReader reader = new BufferedReader(isr);
-                    productCartList = gson.fromJson(reader, type);
-                }
+                productCartList = JsonUtils.readCarts();
 
                 List<ProductInCart> actualProductsInCart = new ArrayList<>();
                 for(ActiveCarts ac : productCartList){

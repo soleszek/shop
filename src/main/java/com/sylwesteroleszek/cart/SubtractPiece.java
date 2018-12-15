@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.JsonClass;
 import com.sylwesteroleszek.products.Product;
+import com.sylwesteroleszek.utils.JsonUtils;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,15 +30,9 @@ public class SubtractPiece extends HttpServlet {
         String user = (String)req.getSession().getAttribute("user");
         double productId = Double.parseDouble(req.getParameter("subtract"));
 
-        JsonClass jsonClass = new JsonClass();
+        JsonClass jsonClass;
 
-        InputStream isP = new FileInputStream(file);
-
-        if(isP != null) {
-            InputStreamReader isr = new InputStreamReader(isP);
-            BufferedReader reader = new BufferedReader(isr);
-            jsonClass = gson.fromJson(reader, JsonClass.class);
-        }
+        jsonClass = JsonUtils.readProducts();
 
         List<Product> products = jsonClass.getProducts();
 
