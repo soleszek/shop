@@ -31,22 +31,10 @@ public class LoginServlet extends HttpServlet {
 
         JsonClass jsonClass = new JsonClass();
 
-        //String file = "/WEB-INF/data.json";
         String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
         String carts = "/home/sylwester/Dokumenty/projekty/sklep/carts.json";
-        //ServletContext context = getServletContext();
 
         List<NewUser> newUsers = JsonUtils.readUsers();
-
-        /*InputStream is = new FileInputStream(file);
-
-        if(is != null) {
-            InputStreamReader isr = new InputStreamReader(is);
-            BufferedReader reader = new BufferedReader(isr);
-            jsonClass = gson.fromJson(reader, JsonClass.class);
-        }
-
-        List<NewUser> newUsers = jsonClass.getUsers();*/
 
         String user = req.getParameter("username");
         String password = req.getParameter("password");

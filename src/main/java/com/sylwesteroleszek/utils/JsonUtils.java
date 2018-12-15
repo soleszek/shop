@@ -35,7 +35,7 @@ public class JsonUtils {
         return jsonClass.getUsers();
     }
 
-    public List<Product> readProducts() throws FileNotFoundException {
+    public static JsonClass readProducts() throws FileNotFoundException {
         InputStream isP = new FileInputStream(file);
 
         if (isP != null) {
@@ -44,7 +44,7 @@ public class JsonUtils {
             jsonClass = gson.fromJson(reader, JsonClass.class);
         }
 
-        return jsonClass.getProducts();
+        return jsonClass;
     }
 
     public List<ActiveCarts> readCarts() throws FileNotFoundException {
