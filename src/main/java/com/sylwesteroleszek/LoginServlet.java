@@ -5,10 +5,9 @@ import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.cart.ActiveCarts;
 import com.sylwesteroleszek.cart.ProductInCart;
 import com.sylwesteroleszek.entity.NewUser;
-import com.sylwesteroleszek.products.Product;
+import com.sylwesteroleszek.utils.JsonUtils;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -19,6 +18,8 @@ import java.io.*;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.sylwesteroleszek.utils.JsonUtils.readUsers;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -34,7 +35,10 @@ public class LoginServlet extends HttpServlet {
         String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
         String carts = "/home/sylwester/Dokumenty/projekty/sklep/carts.json";
         //ServletContext context = getServletContext();
-        InputStream is = new FileInputStream(file);
+
+        List<NewUser> newUsers = JsonUtils.readUsers();
+
+        /*InputStream is = new FileInputStream(file);
 
         if(is != null) {
             InputStreamReader isr = new InputStreamReader(is);
@@ -42,7 +46,7 @@ public class LoginServlet extends HttpServlet {
             jsonClass = gson.fromJson(reader, JsonClass.class);
         }
 
-        List<NewUser> newUsers = jsonClass.getUsers();
+        List<NewUser> newUsers = jsonClass.getUsers();*/
 
         String user = req.getParameter("username");
         String password = req.getParameter("password");
