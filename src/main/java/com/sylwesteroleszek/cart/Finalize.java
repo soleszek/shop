@@ -1,10 +1,9 @@
 package com.sylwesteroleszek.cart;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.sylwesteroleszek.JsonClass;
+import com.sylwesteroleszek.dao.ActiveCartsDao;
+import com.sylwesteroleszek.dao.NewUserDao;
 import com.sylwesteroleszek.entity.NewUser;
-import com.sylwesteroleszek.utils.JsonDaoImpl;
+import com.sylwesteroleszek.providers.DaoProvider;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -13,21 +12,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/Finalize")
 public class Finalize extends HttpServlet {
 
-    Gson gson = new Gson();
+    NewUserDao newUserDao = DaoProvider.getInstance().getNewUserDao();
+    ActiveCartsDao activeCartsDao = DaoProvider.getInstance().getActiveCartsDao();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String user = (String)req.getSession().getAttribute("user");
-
-        JsonClass jsonClass;
 
         //Cart
 
@@ -35,9 +32,7 @@ public class Finalize extends HttpServlet {
 
         List<ActiveCarts> productCartList;
 
-        Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
-
-        productCartList = JsonDaoImpl.readCarts();
+        productCartList = activeCartsDao.findAll();
 
         for(ActiveCarts ac : productCartList){
             if(ac.getUsername().equals(user)){
@@ -53,25 +48,21 @@ public class Finalize extends HttpServlet {
             }
         }
 
-        String jsonCarts = gson.toJson(productCartList, type);
-
-        JsonDaoImpl.saveProductToCart(jsonCarts);
+        activeCartsDao.saveOrUpdate(productCartList);
 
         //Stock
 
-        jsonClass = JsonDaoImpl.readProducts();
-
-        List<NewUser> users = jsonClass.getUsers();
+        List<NewUser> users = newUserDao.readUsers();
+        NewUser newUser = new NewUser();
 
         for(NewUser nu : users){
             if(nu.getUsername().equals(user)){
-                nu.setTotalCashSpend(nu.getTotalCashSpend()+(long)totalCashSpent);
+                newUser = nu;
+                newUser.setTotalCashSpend(nu.getTotalCashSpend()+(long)totalCashSpent);
             }
         }
 
-        String jsonData = gson.toJson(jsonClass);
-
-        JsonDaoImpl.saveProduct(jsonData);
+        newUserDao.updateUser(newUser);
 
         List<ProductInCart> actualProductsInCart = new ArrayList<>();
         for(ActiveCarts ac : productCartList){

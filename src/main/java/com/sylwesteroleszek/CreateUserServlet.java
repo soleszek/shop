@@ -1,10 +1,8 @@
 package com.sylwesteroleszek;
 
-import com.google.gson.Gson;
 import com.sylwesteroleszek.dao.NewUserDao;
 import com.sylwesteroleszek.entity.NewUser;
 import com.sylwesteroleszek.providers.DaoProvider;
-import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

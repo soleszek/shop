@@ -2,11 +2,10 @@ package com.sylwesteroleszek;
 
 import com.sylwesteroleszek.cart.ActiveCarts;
 import com.sylwesteroleszek.cart.ProductInCart;
+import com.sylwesteroleszek.dao.ActiveCartsDao;
 import com.sylwesteroleszek.dao.NewUserDao;
-import com.sylwesteroleszek.dao.ProductDao;
 import com.sylwesteroleszek.entity.NewUser;
 import com.sylwesteroleszek.providers.DaoProvider;
-import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,6 +22,7 @@ import java.util.List;
 public class LoginServlet extends HttpServlet {
 
     NewUserDao newUserDao = DaoProvider.getInstance().getNewUserDao();
+    ActiveCartsDao activeCartsDao = DaoProvider.getInstance().getActiveCartsDao();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -50,7 +50,7 @@ public class LoginServlet extends HttpServlet {
 
                 List<ActiveCarts> productCartList;
 
-                productCartList = JsonDaoImpl.readCarts();
+                productCartList = activeCartsDao.findAll();
 
                 List<ProductInCart> actualProductsInCart = new ArrayList<>();
                 for(ActiveCarts ac : productCartList){

@@ -23,6 +23,11 @@ public class NewUserDaoImplHibernate implements NewUserDao {
         return null;
     }
 
+    @Override
+    public void updateUser(NewUser newUser) {
+
+    }
+
     /*@Override
     public NewUser findBy(String login) {
         try {

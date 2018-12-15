@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
 import java.util.List;
 
 public interface NewUserDao {
-    List<NewUser> readUsers() throws FileNotFoundException;
-    void saveUser(NewUser newUser) throws FileNotFoundException;
+    List<NewUser> readUsers();
+    void saveUser(NewUser newUser);
+    void updateUser(NewUser newUser);
 }

@@ -1,12 +1,9 @@
 package com.sylwesteroleszek.cart;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.sylwesteroleszek.JsonClass;
+import com.sylwesteroleszek.dao.ActiveCartsDao;
 import com.sylwesteroleszek.dao.ProductDao;
 import com.sylwesteroleszek.products.Product;
 import com.sylwesteroleszek.providers.DaoProvider;
-import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,14 +12,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/SubtractPiece")
 public class SubtractPiece extends HttpServlet {
-    Gson gson = new Gson();
+
     ProductDao productDao = DaoProvider.getInstance().getProduct();
+    ActiveCartsDao activeCartsDao = DaoProvider.getInstance().getActiveCartsDao();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -41,9 +38,7 @@ public class SubtractPiece extends HttpServlet {
 
         //Cart
 
-        List<ActiveCarts> productCartList = JsonDaoImpl.readCarts();
-
-        Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
+        List<ActiveCarts> productCartList = activeCartsDao.findAll();
 
         for(ActiveCarts ac : productCartList){
             if(ac.getUsername().equals(user)){
@@ -55,9 +50,7 @@ public class SubtractPiece extends HttpServlet {
             }
         }
 
-        String jsonCarts = gson.toJson(productCartList, type);
-
-        JsonDaoImpl.saveProductToCart(jsonCarts);
+        activeCartsDao.saveOrUpdate(productCartList);
 
         List<ProductInCart> actualProductsInCart = new ArrayList<>();
         for(ActiveCarts ac : productCartList){

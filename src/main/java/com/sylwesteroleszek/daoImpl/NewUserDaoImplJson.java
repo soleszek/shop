@@ -42,6 +42,21 @@ public class NewUserDaoImplJson implements NewUserDao {
 
     }
 
+    public void updateUser(NewUser newUser){
+
+        Long indexLong = (newUser.getId() - 1);
+        int index = indexLong.intValue();
+
+        jsonClass = readJsonFile();
+
+        List<NewUser> newUsers = jsonClass.getUsers();
+        newUsers.set(index, newUser);
+
+        String json = gson.toJson(jsonClass);
+
+        saveJsonFile(json);
+    }
+
     private JsonClass readJsonFile() {
 
         InputStream is = null;
