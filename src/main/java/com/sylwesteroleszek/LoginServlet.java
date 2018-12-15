@@ -1,10 +1,12 @@
 package com.sylwesteroleszek;
 
 import com.google.gson.Gson;
+import com.sylwesteroleszek.cart.ActiveCarts;
+import com.sylwesteroleszek.cart.ProductInCart;
 import com.sylwesteroleszek.entity.NewUser;
+import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -12,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/LoginServlet")
@@ -22,18 +25,12 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        JsonClass jsonClass = new JsonClass();
+        JsonClass jsonClass;
 
-        //String file = "/WEB-INF/data.json";
         String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
-        //ServletContext context = getServletContext();
-        InputStream is = new FileInputStream(file);
+        String carts = "/home/sylwester/Dokumenty/projekty/sklep/carts.json";
 
-        if(is != null) {
-            InputStreamReader isr = new InputStreamReader(is);
-            BufferedReader reader = new BufferedReader(isr);
-            jsonClass = gson.fromJson(reader, JsonClass.class);
-        }
+        jsonClass = JsonDaoImpl.readUsers();
 
         List<NewUser> newUsers = jsonClass.getUsers();
 
@@ -49,8 +46,26 @@ public class LoginServlet extends HttpServlet {
                 loginCookie.setMaxAge(30 * 60);
 
                 resp.addCookie(loginCookie);
-                //req.setAttribute(u.getUsername(), user);
-                //resp.sendRedirect("loginSuccess.jsp");
+
+                Long totalCashSpend = 0l;
+
+                if(u.getUsername().equals(user)){
+                        totalCashSpend = u.getTotalCashSpend();
+                }
+
+                List<ActiveCarts> productCartList = new ArrayList<>();
+
+                productCartList = JsonDaoImpl.readCarts();
+
+                List<ProductInCart> actualProductsInCart = new ArrayList<>();
+                for(ActiveCarts ac : productCartList){
+                    if(ac.getUsername().equals(user)){
+                        actualProductsInCart = ac.getProductInCarts();
+                    }
+                }
+
+                req.getSession().setAttribute("productsInCart", actualProductsInCart);
+                req.setAttribute("totalCashSpend", totalCashSpend);
                 req.getSession().setAttribute("user", u.getUsername());
                 RequestDispatcher rD = req.getRequestDispatcher("loginSuccess.jsp");
                 rD.forward(req, resp);
@@ -63,8 +78,6 @@ public class LoginServlet extends HttpServlet {
                     .println("<font color=red>Incorrect or missing login details</font>");
             rd.include(req, resp);
         }
-
-
     }
 
 }

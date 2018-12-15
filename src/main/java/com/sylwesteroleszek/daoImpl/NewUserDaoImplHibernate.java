@@ -1,14 +1,16 @@
-package com.sylwesteroleszek.dao;
+package com.sylwesteroleszek.daoImpl;
 
+import com.sylwesteroleszek.dao.NewUserDao;
 import com.sylwesteroleszek.entity.NewUser;
 import com.sylwesteroleszek.utils.HibernateUtils;
 import org.hibernate.Session;
 
 import javax.persistence.NoResultException;
+import java.util.List;
 
-public class NewUserDaoImpl implements NewUserDao {
-    @Override
-    public void saveOrUpdate(NewUser newUser) {
+public class NewUserDaoImplHibernate implements NewUserDao {
+
+    public void saveUser(NewUser newUser) {
         Session session = HibernateUtils.getInstance().getSessionFactory().getCurrentSession();
         session.beginTransaction();
         session.saveOrUpdate(newUser);
@@ -17,6 +19,11 @@ public class NewUserDaoImpl implements NewUserDao {
     }
 
     @Override
+    public List<NewUser> readUsers() {
+        return null;
+    }
+
+    /*@Override
     public NewUser findBy(String login) {
         try {
             Session session = HibernateUtils.getInstance().getSessionFactory().getCurrentSession();
@@ -30,5 +37,20 @@ public class NewUserDaoImpl implements NewUserDao {
         } catch (NoResultException e){
             return null;
         }
+    }*/
+
+    /*@Override
+    public List<NewUser> findAll() {
+        return null;
     }
+
+    @Override
+    public void delete(String username) {
+
+    }
+
+    @Override
+    public void delete(NewUser newUser) {
+
+    }*/
 }

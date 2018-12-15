@@ -1,8 +1,11 @@
 package com.sylwesteroleszek.dao;
 
+import com.sylwesteroleszek.JsonClass;
 import com.sylwesteroleszek.entity.NewUser;
 
+import java.util.List;
+
 public interface NewUserDao {
-    void saveOrUpdate(NewUser newUser);
-    NewUser findBy(String login);
+    List<NewUser> readUsers();
+    void saveUser(NewUser newUser);
 }

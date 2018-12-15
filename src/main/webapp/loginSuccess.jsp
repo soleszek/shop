@@ -32,9 +32,14 @@
     }
 %>
 
+    <%
+        String totalCashSpend = String.valueOf(request.getAttribute("totalCashSpend"));
+    %>
+
     <div id="logo">
 
-        <h3>You are now logged in <%=userName%></h3>
+        <h3>You are now logged in <%=userName%></h3><br>
+        <p>You spent in our shop <%=totalCashSpend%> $ so far.</p>
 
     </div>
 
