@@ -1,24 +1,16 @@
 package com.sylwesteroleszek.daoImpl.json;
 
 import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.JsonClass;
-import com.sylwesteroleszek.entity.ActiveCarts;
 import com.sylwesteroleszek.dao.ProductDao;
 import com.sylwesteroleszek.entity.Product;
-
-import java.io.*;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
+import com.sylwesteroleszek.utils.JsonUtils;
 import java.util.List;
 
 public class ProductDaoJson implements ProductDao {
 
     Gson gson = new Gson();
     JsonClass jsonClass = new JsonClass();
-    Type type = new TypeToken<ArrayList<ActiveCarts>>() {
-    }.getType();
-
 
     String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
 
@@ -27,7 +19,7 @@ public class ProductDaoJson implements ProductDao {
         Long indexLong = (product.getId() - 1);
         int index = indexLong.intValue();
 
-        jsonClass = readJsonFile();
+        jsonClass = JsonUtils.readJsonFromFile(file);
 
         List<Product> products = jsonClass.getProducts();
 
@@ -35,7 +27,7 @@ public class ProductDaoJson implements ProductDao {
 
         String json = gson.toJson(jsonClass);
 
-        saveJsonFile(json);
+        JsonUtils.saveJsonFile(file, json);
     }
 
     public Product findBy(String productId){
@@ -44,44 +36,11 @@ public class ProductDaoJson implements ProductDao {
 
         int productIdInt = productIdD.intValue();
 
-        return readJsonFile().getProducts().get(productIdInt - 1);
+        return  JsonUtils.readJsonFromFile(file).getProducts().get(productIdInt - 1);
     }
 
     @Override
     public List<Product> findAll() {
-        return readJsonFile().getProducts();
+        return JsonUtils.readJsonFromFile(file).getProducts();
     }
-
-
-
-    private JsonClass readJsonFile(){
-
-        InputStream is = null;
-
-        try {
-            is = new FileInputStream(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-
-        if (is != null) {
-            InputStreamReader isr = new InputStreamReader(is);
-            BufferedReader reader = new BufferedReader(isr);
-            return gson.fromJson(reader, JsonClass.class);
-        }
-
-        return null;
-    }
-
-    private void saveJsonFile(String json){
-        try {
-            FileWriter writer = new FileWriter(file);
-            writer.write(json);
-            writer.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
 }
