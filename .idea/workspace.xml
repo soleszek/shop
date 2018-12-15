@@ -7,8 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27ffbbd6-af36-426d-8721-93f707863c2f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductDaoJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductDaoJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/dao/NewUserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/dao/NewUserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/providers/DaoProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sylwesteroleszek/providers/DaoProvider.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,7 +65,7 @@
           <entry key="NewUser" value="2" />
           <entry key="class" value="1" />
           <entry key="css" value="25" />
-          <entry key="java" value="192" />
+          <entry key="java" value="199" />
           <entry key="jpg" value="2" />
           <entry key="json" value="30" />
           <entry key="jsp" value="65" />
@@ -70,7 +80,7 @@
           <entry key="CSS" value="25" />
           <entry key="Database Element" value="2" />
           <entry key="Image" value="2" />
-          <entry key="JAVA" value="192" />
+          <entry key="JAVA" value="199" />
           <entry key="JSON" value="30" />
           <entry key="JSP" value="65" />
           <entry key="PLAIN_TEXT" value="8" />
@@ -82,7 +92,7 @@
         <counts>
           <entry key="css" value="2251" />
           <entry key="dummy" value="79" />
-          <entry key="java" value="9719" />
+          <entry key="java" value="9811" />
           <entry key="json" value="320" />
           <entry key="jsp" value="3514" />
           <entry key="txt" value="110" />
@@ -92,7 +102,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="2251" />
-          <entry key="JAVA" value="9719" />
+          <entry key="JAVA" value="9811" />
           <entry key="JSON" value="320" />
           <entry key="JSP" value="3514" />
           <entry key="PLAIN_TEXT" value="189" />
@@ -108,17 +118,27 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
+                <state relative-caret-position="180">
+                  <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+                  <folding>
+                    <element signature="e#799#800#0" expanded="true" />
+                    <element signature="e#830#831#0" expanded="true" />
+                    <element signature="e#870#871#0" expanded="true" />
+                    <element signature="e#903#904#0" expanded="true" />
+                    <element signature="e#950#951#0" expanded="true" />
+                    <element signature="e#989#990#0" expanded="true" />
+                    <element signature="e#1038#1039#0" expanded="true" />
+                    <element signature="e#1075#1076#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/Main.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="660">
-                  <caret line="44" column="33" lean-forward="true" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -126,11 +146,25 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/Main.java">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductDaoJson.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+                <state relative-caret-position="84">
+                  <caret line="18" selection-start-line="18" selection-end-line="18" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#790#791#0" expanded="true" />
+                    <element signature="e#841#842#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="543">
+                  <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -142,11 +176,23 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="165">
-                  <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+                  <caret line="12" selection-start-line="12" selection-end-line="12" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="290">
+                  <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -215,15 +261,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ActiveCartsDaoImplJson.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/utils/JsonDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplHibernate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/ProductInCartDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductInCartDaoJson.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductDaoJson.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/ProductDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductDaoJson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java" />
       </list>
     </option>
   </component>
@@ -329,6 +375,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="sylwesteroleszek" type="462c0819:PsiDirectoryNode" />
+              <item name="daoImpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjektJSP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjektJSP" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="sylwesteroleszek" type="462c0819:PsiDirectoryNode" />
               <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -390,7 +445,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544894087903" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544895573083" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Dokumenty/projekty/sklep/data.json" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -424,7 +479,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Tomcat Server.Unnamed">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sylwesteroleszek.Main" />
       <module name="ProjektJSP" />
@@ -612,7 +667,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213873000" />
+    <option name="totallyTimeSpent" value="215040000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -625,7 +680,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="34" width="1920" height="1046" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -634,19 +688,19 @@
       <window_info id="Image Layers" order="4" />
       <window_info id="Web" order="5" side_tool="true" />
       <window_info id="Persistence" order="6" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="7" weight="0.36105034" />
+      <window_info content_ui="combo" id="Project" order="7" weight="0.18903089" />
       <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="0" visible="true" weight="0.33116177" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32972974" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" weight="0.32972974" />
-      <window_info anchor="bottom" id="Messages" order="4" visible="true" weight="0.14718615" />
+      <window_info anchor="bottom" id="Messages" order="4" weight="0.14718615" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32900432" />
       <window_info anchor="bottom" id="Application Servers" order="7" weight="0.32900432" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.17316018" />
-      <window_info anchor="bottom" id="Run" order="10" weight="0.33766234" />
+      <window_info active="true" anchor="bottom" id="Run" order="10" visible="true" weight="0.33766234" />
       <window_info anchor="bottom" id="Debug" order="11" weight="0.32575756" />
       <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
@@ -714,6 +768,12 @@
           <line>20</line>
           <properties />
           <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/Main.java</url>
+          <line>11</line>
+          <properties />
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -921,9 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding>
-            <element signature="e#857#858#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -977,9 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="41" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -994,11 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#274#275#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1016,39 +1065,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <element signature="e#673#674#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductDaoJson.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#261#262#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1066,20 +1082,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="44" column="33" lean-forward="true" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+        <state relative-caret-position="165">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/dao/NewUserDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/providers/DaoProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="180">
+          <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
+          <folding>
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#830#831#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#903#904#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#1075#1076#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/NewUserDaoImplJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1088,8 +1121,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="35" lean-forward="true" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        <state relative-caret-position="210">
+          <caret line="14" column="49" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/daoImpl/ProductDaoJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sylwesteroleszek/CreateUserServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="543">
+          <caret line="39" column="38" selection-start-line="39" selection-start-column="38" selection-end-line="39" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

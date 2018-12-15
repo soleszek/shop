@@ -5,6 +5,7 @@ import com.sylwesteroleszek.dao.NewUserDao;
 import com.sylwesteroleszek.dao.ProductDao;
 import com.sylwesteroleszek.daoImpl.ActiveCartsDaoImplJson;
 import com.sylwesteroleszek.daoImpl.NewUserDaoImplHibernate;
+import com.sylwesteroleszek.daoImpl.NewUserDaoImplJson;
 import com.sylwesteroleszek.daoImpl.ProductDaoJson;
 
 public class DaoProvider {
@@ -15,7 +16,7 @@ public class DaoProvider {
     private ActiveCartsDao activeCartsDao;
 
     private DaoProvider(){
-        newUserDao = new NewUserDaoImplHibernate();
+        newUserDao = new NewUserDaoImplJson();
         productInCartDao = new ProductDaoJson();
         activeCartsDao = new ActiveCartsDaoImplJson();
     }

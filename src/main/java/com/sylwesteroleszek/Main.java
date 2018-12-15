@@ -4,10 +4,11 @@ import com.sylwesteroleszek.dao.NewUserDao;
 import com.sylwesteroleszek.entity.NewUser;
 import com.sylwesteroleszek.providers.DaoProvider;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         NewUserDao newUserDao = DaoProvider.getInstance().getNewUserDao();
 
         NewUser newUser = new NewUser();

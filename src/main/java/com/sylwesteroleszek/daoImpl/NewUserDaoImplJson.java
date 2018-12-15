@@ -14,12 +14,12 @@ import java.util.List;
 
 public class NewUserDaoImplJson implements NewUserDao {
 
-    static Gson gson = new Gson();
-    static JsonClass jsonClass = new JsonClass();
-    static Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
+    Gson gson = new Gson();
+    JsonClass jsonClass = new JsonClass();
+    Type type = new TypeToken<ArrayList<ActiveCarts>>(){}.getType();
 
 
-    static String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
+    String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
 
     @Override
     public List<NewUser> readUsers() {
@@ -42,15 +42,9 @@ public class NewUserDaoImplJson implements NewUserDao {
 
     }
 
-    private JsonClass readJsonFile(){
+    private JsonClass readJsonFile() {
 
         InputStream is = null;
-
-        try {
-            is = new FileInputStream(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
 
         try {
             is = new FileInputStream(file);
@@ -65,6 +59,7 @@ public class NewUserDaoImplJson implements NewUserDao {
         }
 
         return null;
+
     }
 
     private void saveJsonFile(String json){

@@ -5,8 +5,10 @@ import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.JsonClass;
 import com.sylwesteroleszek.cart.ActiveCarts;
 import com.sylwesteroleszek.cart.ProductInCart;
+import com.sylwesteroleszek.dao.NewUserDao;
 import com.sylwesteroleszek.dao.ProductDao;
 import com.sylwesteroleszek.products.Product;
+import com.sylwesteroleszek.providers.DaoProvider;
 
 import java.io.*;
 import java.lang.reflect.Type;

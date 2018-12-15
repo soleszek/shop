@@ -1,7 +1,9 @@
 package com.sylwesteroleszek;
 
 import com.google.gson.Gson;
+import com.sylwesteroleszek.dao.NewUserDao;
 import com.sylwesteroleszek.entity.NewUser;
+import com.sylwesteroleszek.providers.DaoProvider;
 import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.ServletException;
@@ -15,21 +17,18 @@ import java.util.List;
 @WebServlet("/CreateUserServlet")
 public class CreateUserServlet extends HttpServlet {
 
-    Gson gson = new Gson();
+    NewUserDao newUserDao = DaoProvider.getInstance().getNewUserDao();
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        JsonClass jsonClass;
 
         String name = req.getParameter("name");
         String surname = req.getParameter("surname");
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-        jsonClass = JsonDaoImpl.readUsers();
-
-        List<NewUser> newUsers = jsonClass.getUsers();
+        List<NewUser> newUsers = newUserDao.readUsers();
 
         NewUser newUser = new NewUser();
         newUser.setId(newUsers.size()+1l);
@@ -40,11 +39,7 @@ public class CreateUserServlet extends HttpServlet {
         newUser.setRole("user");
         newUser.setTotalCashSpend(0l);
 
-        newUsers.add(newUser);
-
-        String json = gson.toJson(jsonClass);
-
-        JsonDaoImpl.saveUser(json);
+        newUserDao.saveUser(newUser);
 
         resp.sendRedirect("index.jsp");
     }
