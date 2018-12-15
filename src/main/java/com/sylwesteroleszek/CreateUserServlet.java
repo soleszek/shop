@@ -2,6 +2,7 @@ package com.sylwesteroleszek;
 
 import com.google.gson.Gson;
 import com.sylwesteroleszek.entity.NewUser;
+import com.sylwesteroleszek.utils.JsonUtils;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -20,26 +21,14 @@ public class CreateUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        JsonClass jsonClass = new JsonClass();
-
-        PrintWriter out = resp.getWriter();
+        JsonClass jsonClass;
 
         String name = req.getParameter("name");
         String surname = req.getParameter("surname");
         String username = req.getParameter("username");
         String password = req.getParameter("password");
 
-        //String file = "/WEB-INF/data.json";
-        String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
-        //ServletContext context = getServletContext();
-        //InputStream is = context.getResourceAsStream(file);
-        InputStream is = new FileInputStream(file);
-
-        if(is != null) {
-            InputStreamReader isr = new InputStreamReader(is);
-            BufferedReader reader = new BufferedReader(isr);
-            jsonClass = gson.fromJson(reader, JsonClass.class);
-        }
+        jsonClass = JsonUtils.readUsers();
 
         List<NewUser> newUsers = jsonClass.getUsers();
 
@@ -56,21 +45,8 @@ public class CreateUserServlet extends HttpServlet {
 
         String json = gson.toJson(jsonClass);
 
-        //String path = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
-        //String realPath = getServletContext().getRealPath(file);
-
-        try {
-            FileWriter writer = new FileWriter(file);
-            writer.write(json);
-            writer.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        JsonUtils.saveUser(json);
 
         resp.sendRedirect("index.jsp");
-        //resp.getWriter().append("Użytkownik " + newUser.getUsername() + " utworzony");
-        //resp.getWriter().append(jsonClass.getNewUsers().toString());
-        //resp.getWriter().append(newUser.toString());
     }
 }

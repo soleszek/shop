@@ -23,7 +23,7 @@ public class JsonUtils {
     static String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
     static String carts = "/home/sylwester/Dokumenty/projekty/sklep/carts.json";
 
-    public static List<NewUser> readUsers() throws FileNotFoundException {
+    public static JsonClass readUsers() throws FileNotFoundException {
         InputStream is = new FileInputStream(file);
 
         if (is != null) {
@@ -32,7 +32,7 @@ public class JsonUtils {
             jsonClass = gson.fromJson(reader, JsonClass.class);
         }
 
-        return jsonClass.getUsers();
+        return jsonClass;
     }
 
     public static JsonClass readProducts() throws FileNotFoundException {
@@ -56,7 +56,7 @@ public class JsonUtils {
         return gson.fromJson(reader, type);
     }
 
-    public void saveUser(String json) {
+    public static void saveUser(String json) {
 
         try {
             FileWriter writer = new FileWriter(file);
@@ -68,7 +68,18 @@ public class JsonUtils {
         }
     }
 
-    public void saveProductToCart(String json) {
+    public static void saveProduct(String json){
+        try {
+            FileWriter writer = new FileWriter(file);
+            writer.write(json);
+            writer.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void saveProductToCart(String json) {
         try {
             FileWriter writer = new FileWriter(carts);
             writer.write(json);

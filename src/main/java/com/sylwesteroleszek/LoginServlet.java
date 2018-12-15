@@ -29,12 +29,14 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        JsonClass jsonClass = new JsonClass();
+        JsonClass jsonClass;
 
         String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
         String carts = "/home/sylwester/Dokumenty/projekty/sklep/carts.json";
 
-        List<NewUser> newUsers = JsonUtils.readUsers();
+        jsonClass = JsonUtils.readUsers();
+
+        List<NewUser> newUsers = jsonClass.getUsers();
 
         String user = req.getParameter("username");
         String password = req.getParameter("password");

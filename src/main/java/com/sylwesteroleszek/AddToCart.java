@@ -25,9 +25,6 @@ public class AddToCart extends HttpServlet {
 
     Gson gson = new Gson();
 
-    String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
-    String carts = "/home/sylwester/Dokumenty/projekty/sklep/carts.json";
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
@@ -46,14 +43,7 @@ public class AddToCart extends HttpServlet {
 
         String jsonData = gson.toJson(jsonClass);
 
-        try {
-            FileWriter writer = new FileWriter(file);
-            writer.write(jsonData);
-            writer.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        JsonUtils.saveProduct(jsonData);
 
         //Cart
 
@@ -105,14 +95,7 @@ public class AddToCart extends HttpServlet {
 
         String jsonCarts = gson.toJson(productCartList, type);
 
-        try {
-            FileWriter writer = new FileWriter(carts);
-            writer.write(jsonCarts);
-            writer.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        JsonUtils.saveProductToCart(jsonCarts);
 
         List<ProductInCart> actualProductsInCart = new ArrayList<>();
         for(ActiveCarts ac : productCartList){
@@ -120,7 +103,6 @@ public class AddToCart extends HttpServlet {
                 actualProductsInCart = ac.getProductInCarts();
             }
         }
-
 
         req.getSession().setAttribute("productlist", products);
         req.getSession().setAttribute("productsInCart", actualProductsInCart);
