@@ -1,7 +1,7 @@
 package com.sylwesteroleszek;
 
 import com.sylwesteroleszek.dao.ProductDao;
-import com.sylwesteroleszek.products.Product;
+import com.sylwesteroleszek.entity.Product;
 import com.sylwesteroleszek.providers.DaoProvider;
 
 import javax.servlet.RequestDispatcher;

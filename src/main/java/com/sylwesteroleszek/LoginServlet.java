@@ -1,7 +1,7 @@
 package com.sylwesteroleszek;
 
-import com.sylwesteroleszek.cart.ActiveCarts;
-import com.sylwesteroleszek.cart.ProductInCart;
+import com.sylwesteroleszek.entity.ActiveCarts;
+import com.sylwesteroleszek.entity.ProductInCart;
 import com.sylwesteroleszek.dao.ActiveCartsDao;
 import com.sylwesteroleszek.dao.NewUserDao;
 import com.sylwesteroleszek.entity.NewUser;

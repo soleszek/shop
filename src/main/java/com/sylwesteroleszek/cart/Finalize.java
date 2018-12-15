@@ -2,7 +2,9 @@ package com.sylwesteroleszek.cart;
 
 import com.sylwesteroleszek.dao.ActiveCartsDao;
 import com.sylwesteroleszek.dao.NewUserDao;
+import com.sylwesteroleszek.entity.ActiveCarts;
 import com.sylwesteroleszek.entity.NewUser;
+import com.sylwesteroleszek.entity.ProductInCart;
 import com.sylwesteroleszek.providers.DaoProvider;
 
 import javax.servlet.RequestDispatcher;

@@ -1,12 +1,9 @@
 package com.sylwesteroleszek;
 
-import com.sylwesteroleszek.cart.ProductInCart;
 import com.sylwesteroleszek.entity.NewUser;
-import com.sylwesteroleszek.products.Product;
+import com.sylwesteroleszek.entity.Product;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class JsonClass {
     List<NewUser> users;

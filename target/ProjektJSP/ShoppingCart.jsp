@@ -1,6 +1,6 @@
 <%@ page import="java.util.List" %>
-<%@ page import="com.sylwesteroleszek.products.Product" %>
-<%@ page import="com.sylwesteroleszek.cart.ProductInCart" %>
+<%@ page import="com.sylwesteroleszek.entity.Product" %>
+<%@ page import="com.sylwesteroleszek.entity.ProductInCart" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>

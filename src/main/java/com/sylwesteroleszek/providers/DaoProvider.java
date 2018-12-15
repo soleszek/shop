@@ -3,10 +3,9 @@ package com.sylwesteroleszek.providers;
 import com.sylwesteroleszek.dao.ActiveCartsDao;
 import com.sylwesteroleszek.dao.NewUserDao;
 import com.sylwesteroleszek.dao.ProductDao;
-import com.sylwesteroleszek.daoImpl.ActiveCartsDaoImplJson;
-import com.sylwesteroleszek.daoImpl.NewUserDaoImplHibernate;
-import com.sylwesteroleszek.daoImpl.NewUserDaoImplJson;
-import com.sylwesteroleszek.daoImpl.ProductDaoJson;
+import com.sylwesteroleszek.daoImpl.json.ActiveCartsDaoImplJson;
+import com.sylwesteroleszek.daoImpl.json.NewUserDaoImplJson;
+import com.sylwesteroleszek.daoImpl.json.ProductDaoJson;
 
 public class DaoProvider {
     private static final DaoProvider instance = new DaoProvider();

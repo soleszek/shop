@@ -1,8 +1,6 @@
 package com.sylwesteroleszek.dao;
 
-import com.sylwesteroleszek.JsonClass;
-import com.sylwesteroleszek.cart.ActiveCarts;
-import com.sylwesteroleszek.cart.ProductInCart;
+import com.sylwesteroleszek.entity.ActiveCarts;
 
 import java.util.List;
 
