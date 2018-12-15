@@ -1,7 +1,8 @@
 package com.sylwesteroleszek;
 
+import com.sylwesteroleszek.dao.ProductDao;
 import com.sylwesteroleszek.products.Product;
-import com.sylwesteroleszek.utils.JsonDaoImpl;
+import com.sylwesteroleszek.providers.DaoProvider;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,10 +16,12 @@ import java.util.List;
 @WebServlet("/ProductList")
 public class ProductList extends HttpServlet {
 
+    ProductDao productDao = DaoProvider.getInstance().getProduct();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        List<Product> products = JsonDaoImpl.readProducts().getProducts();
+        List<Product> products = productDao.findAll();
 
         req.getSession().setAttribute("productlist", products);
 

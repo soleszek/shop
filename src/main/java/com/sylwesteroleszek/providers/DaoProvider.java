@@ -12,12 +12,12 @@ public class DaoProvider {
     private static final DaoProvider instance = new DaoProvider();
 
     private NewUserDao newUserDao;
-    private ProductDao productInCartDao;
+    private ProductDao productDao;
     private ActiveCartsDao activeCartsDao;
 
     private DaoProvider(){
         newUserDao = new NewUserDaoImplJson();
-        productInCartDao = new ProductDaoJson();
+        productDao = new ProductDaoJson();
         activeCartsDao = new ActiveCartsDaoImplJson();
     }
 
@@ -29,8 +29,8 @@ public class DaoProvider {
         return newUserDao;
     }
 
-    public ProductDao getProductInCartDao() {
-        return productInCartDao;
+    public ProductDao getProduct() {
+        return productDao;
     }
 
     public ActiveCartsDao getActiveCartsDao() {

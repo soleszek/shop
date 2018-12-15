@@ -3,7 +3,9 @@ package com.sylwesteroleszek.cart;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.JsonClass;
+import com.sylwesteroleszek.dao.ProductDao;
 import com.sylwesteroleszek.products.Product;
+import com.sylwesteroleszek.providers.DaoProvider;
 import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.RequestDispatcher;
@@ -20,14 +22,13 @@ import java.util.List;
 @WebServlet("/RemoveProduct")
 public class RemoveProduct extends HttpServlet {
     Gson gson = new Gson();
+    ProductDao productDao = DaoProvider.getInstance().getProduct();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String user = (String)req.getSession().getAttribute("user");
-        double productId = Double.parseDouble(req.getParameter("remove"));
-
-        JsonClass jsonClass = new JsonClass();
+        String productId = req.getParameter("remove");
 
         //Cart
 
@@ -46,10 +47,9 @@ public class RemoveProduct extends HttpServlet {
                 for( int i = 0; i < productsInCart.size(); i++ )
                 {
 
-                    if(productsInCart.get(i).getProductId() == productId){
+                    if(productsInCart.get(i).getProductId() == Double.parseDouble(productId)){
                         numberOfPieces = productsInCart.get(i).getQuantity();
                         productsInCart.remove(productsInCart.get(i));
-                        //i--;
                     }
                 }
             }
@@ -61,17 +61,11 @@ public class RemoveProduct extends HttpServlet {
 
         //Stock
 
-        jsonClass = JsonDaoImpl.readProducts();
+        Product product = productDao.findBy(productId);
+        int quantity = product.getQuantity();
+        product.setQuantity(quantity + (int)numberOfPieces);
 
-        List<Product> products = jsonClass.getProducts();
-
-        int index = ((int)(productId)) -1;
-
-        products.get(index).setQuantity(products.get(index).getQuantity() + (int)numberOfPieces);
-
-        String jsonData = gson.toJson(jsonClass);
-
-        JsonDaoImpl.saveProduct(jsonData);
+        productDao.updateProduct(product);
 
         List<ProductInCart> actualProductsInCart = new ArrayList<>();
         for(ActiveCarts ac : productCartList){
@@ -80,6 +74,7 @@ public class RemoveProduct extends HttpServlet {
             }
         }
 
+        List<Product> products = productDao.findAll();
 
         req.getSession().setAttribute("productlist", products);
         req.getSession().setAttribute("productsInCart", actualProductsInCart);

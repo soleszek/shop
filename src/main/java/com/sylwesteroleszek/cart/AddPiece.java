@@ -3,7 +3,9 @@ package com.sylwesteroleszek.cart;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.JsonClass;
+import com.sylwesteroleszek.dao.ProductDao;
 import com.sylwesteroleszek.products.Product;
+import com.sylwesteroleszek.providers.DaoProvider;
 import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.RequestDispatcher;
@@ -20,24 +22,22 @@ import java.util.List;
 @WebServlet("/AddPiece")
 public class AddPiece extends HttpServlet {
     Gson gson = new Gson();
+    ProductDao productDao = DaoProvider.getInstance().getProduct();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String user = (String)req.getSession().getAttribute("user");
-        double productId = Double.parseDouble(req.getParameter("add"));
+        String productId = req.getParameter("add");
 
-        JsonClass jsonClass = JsonDaoImpl.readProducts();
+        Product product = productDao.findBy(productId);
 
-        List<Product> products = jsonClass.getProducts();
+        int quantity = product.getQuantity();
+        product.setQuantity(quantity - 1);
 
-        int index = ((int)(productId)) -1;
+        productDao.updateProduct(product);
 
-        products.get(index).setQuantity(products.get(index).getQuantity() - 1);
-
-        String jsonData = gson.toJson(jsonClass);
-
-        JsonDaoImpl.saveProduct(jsonData);
+        List<Product> products = productDao.findAll();
 
         //Cart
 
@@ -48,7 +48,7 @@ public class AddPiece extends HttpServlet {
         for(ActiveCarts ac : productCartList){
             if(ac.getUsername().equals(user)){
                 for (ProductInCart p : ac.getProductInCarts()){
-                    if(p.getProductId() == (productId)){
+                    if(p.getProductId() == (Double.parseDouble(productId))){
                         p.setQuantity(p.getQuantity() + 1);
                     }
                 }
@@ -65,7 +65,6 @@ public class AddPiece extends HttpServlet {
                 actualProductsInCart = ac.getProductInCarts();
             }
         }
-
 
         req.getSession().setAttribute("productlist", products);
         req.getSession().setAttribute("productsInCart", actualProductsInCart);

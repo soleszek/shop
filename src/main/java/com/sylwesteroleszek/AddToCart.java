@@ -4,7 +4,9 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.cart.ActiveCarts;
 import com.sylwesteroleszek.cart.ProductInCart;
+import com.sylwesteroleszek.dao.ProductDao;
 import com.sylwesteroleszek.products.Product;
+import com.sylwesteroleszek.providers.DaoProvider;
 import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.RequestDispatcher;
@@ -22,26 +24,21 @@ import java.util.List;
 public class AddToCart extends HttpServlet {
 
     Gson gson = new Gson();
+    ProductDao productDao = DaoProvider.getInstance().getProduct();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String user = (String)req.getSession().getAttribute("user");
-        String productId = (String)req.getParameter("productId");
+        String productId = req.getParameter("productId");
 
-        JsonClass jsonClass;
+        Product product = productDao.findBy(productId);
 
-        jsonClass = JsonDaoImpl.readProducts();
+        int quantity = product.getQuantity();
 
-        List<Product> products = jsonClass.getProducts();
+        product.setQuantity(quantity - 1);
 
-        int index = Integer.parseInt(productId) -1;
-
-        products.get(index).setQuantity(products.get(index).getQuantity() - 1);
-
-        String jsonData = gson.toJson(jsonClass);
-
-        JsonDaoImpl.saveProduct(jsonData);
+        productDao.updateProduct(product);
 
         //Cart
 
@@ -53,6 +50,8 @@ public class AddToCart extends HttpServlet {
 
         Boolean isClientExist = false;
         Boolean isProductExist = false;
+        int index = Integer.parseInt(productId) -1;
+        List<Product> products = productDao.findAll();
 
         for(ActiveCarts ac : productCartList){
             if(ac.getUsername().equals(user)){

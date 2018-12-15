@@ -3,7 +3,9 @@ package com.sylwesteroleszek.cart;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.sylwesteroleszek.JsonClass;
+import com.sylwesteroleszek.dao.ProductDao;
 import com.sylwesteroleszek.products.Product;
+import com.sylwesteroleszek.providers.DaoProvider;
 import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.RequestDispatcher;
@@ -20,26 +22,22 @@ import java.util.List;
 @WebServlet("/SubtractPiece")
 public class SubtractPiece extends HttpServlet {
     Gson gson = new Gson();
+    ProductDao productDao = DaoProvider.getInstance().getProduct();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         String user = (String)req.getSession().getAttribute("user");
-        double productId = Double.parseDouble(req.getParameter("subtract"));
+        String productId = req.getParameter("subtract");
 
-        JsonClass jsonClass;
+        Product product = productDao.findBy(productId);
 
-        jsonClass = JsonDaoImpl.readProducts();
+        int quantity = product.getQuantity();
+        product.setQuantity(quantity + 1);
 
-        List<Product> products = jsonClass.getProducts();
+        productDao.updateProduct(product);
 
-        int index = ((int)(productId)) -1;
-
-        products.get(index).setQuantity(products.get(index).getQuantity() + 1);
-
-        String jsonData = gson.toJson(jsonClass);
-
-        JsonDaoImpl.saveProduct(jsonData);
+        List<Product> products = productDao.findAll();
 
         //Cart
 
@@ -50,7 +48,7 @@ public class SubtractPiece extends HttpServlet {
         for(ActiveCarts ac : productCartList){
             if(ac.getUsername().equals(user)){
                 for (ProductInCart p : ac.getProductInCarts()){
-                    if(p.getProductId() == (productId)){
+                    if(p.getProductId() == (Double.parseDouble(productId))){
                         p.setQuantity(p.getQuantity() - 1);
                     }
                 }

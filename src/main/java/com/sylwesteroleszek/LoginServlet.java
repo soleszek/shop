@@ -1,9 +1,11 @@
 package com.sylwesteroleszek;
 
-import com.google.gson.Gson;
 import com.sylwesteroleszek.cart.ActiveCarts;
 import com.sylwesteroleszek.cart.ProductInCart;
+import com.sylwesteroleszek.dao.NewUserDao;
+import com.sylwesteroleszek.dao.ProductDao;
 import com.sylwesteroleszek.entity.NewUser;
+import com.sylwesteroleszek.providers.DaoProvider;
 import com.sylwesteroleszek.utils.JsonDaoImpl;
 
 import javax.servlet.RequestDispatcher;
@@ -20,19 +22,12 @@ import java.util.List;
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 
-    Gson gson = new Gson();
+    NewUserDao newUserDao = DaoProvider.getInstance().getNewUserDao();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        JsonClass jsonClass;
-
-        String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
-        String carts = "/home/sylwester/Dokumenty/projekty/sklep/carts.json";
-
-        jsonClass = JsonDaoImpl.readUsers();
-
-        List<NewUser> newUsers = jsonClass.getUsers();
+        List<NewUser> newUsers = newUserDao.readUsers();
 
         String user = req.getParameter("username");
         String password = req.getParameter("password");
@@ -53,7 +48,7 @@ public class LoginServlet extends HttpServlet {
                         totalCashSpend = u.getTotalCashSpend();
                 }
 
-                List<ActiveCarts> productCartList = new ArrayList<>();
+                List<ActiveCarts> productCartList;
 
                 productCartList = JsonDaoImpl.readCarts();
 

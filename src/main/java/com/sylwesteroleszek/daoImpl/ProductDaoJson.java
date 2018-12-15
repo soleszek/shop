@@ -17,28 +17,42 @@ import java.util.List;
 
 public class ProductDaoJson implements ProductDao {
 
-    static Gson gson = new Gson();
-    static JsonClass jsonClass = new JsonClass();
-    static Type type = new TypeToken<ArrayList<ActiveCarts>>() {
+    Gson gson = new Gson();
+    JsonClass jsonClass = new JsonClass();
+    Type type = new TypeToken<ArrayList<ActiveCarts>>() {
     }.getType();
 
 
-    static String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
+    String file = "/home/sylwester/Dokumenty/projekty/sklep/data.json";
 
-    @Override
-    public List<Product> readProduct() {
-        return readJsonFile().getProducts();
-    }
+    public void updateProduct(Product product) {
 
-    public void saveProduct(Product product) {
+        Long indexLong = (product.getId() - 1);
+        int index = indexLong.intValue();
+
         jsonClass = readJsonFile();
 
         List<Product> products = jsonClass.getProducts();
-        products.add(product);
+
+        products.set(index, product);
 
         String json = gson.toJson(jsonClass);
 
         saveJsonFile(json);
+    }
+
+    public Product findBy(String productId){
+
+        Double productIdD = Double.parseDouble(productId);
+
+        int productIdInt = productIdD.intValue();
+
+        return readJsonFile().getProducts().get(productIdInt - 1);
+    }
+
+    @Override
+    public List<Product> findAll() {
+        return readJsonFile().getProducts();
     }
 
 
@@ -46,12 +60,6 @@ public class ProductDaoJson implements ProductDao {
     private JsonClass readJsonFile(){
 
         InputStream is = null;
-
-        try {
-            is = new FileInputStream(file);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
 
         try {
             is = new FileInputStream(file);
